@@ -1,21 +1,16 @@
 ---
 title: API Reference
 
-language_tabs:
-  - Mobile/Web
-  - POS
-
 search: true
 ---
 
 # Authentication
 
-### Request
-
 > Basic Authen
 
 ```shell
 curl {client_id}:{client_secret}@https://api.cpone-dev.com/oauth/token 
+  -X POST
   -d grant_type=password 
   -d username={username} 
   -d password={password}
@@ -26,6 +21,7 @@ curl {client_id}:{client_secret}@https://api.cpone-dev.com/oauth/token
 ```shell
 # base64 of client:secret = Y2xpZW50OnNlY3JldA==
 curl https://api.cpone-dev.com/oauth/token 
+  -X POST
   -H "Authorization: Basic Y2xpZW50OnNlY3JldA==" 
   -d grant_type=password 
   -d username={username} 
@@ -43,6 +39,7 @@ curl https://api.cpone-dev.com/oauth/token
 }
 ```
 
+### Request
 `POST https://api.cpone-dev.com/oauth/token`
 
 ### Query Parameters
@@ -56,3 +53,188 @@ POST | password | String |
 <aside class="notice">
 You must replace <code>{client_id}</code> and <code>{client_secret}</code> with your personal API key.
 </aside>
+
+# Register
+
+> Request Send Register Data
+
+```shell
+curl https://api.cpone-dev.com/customers/register
+  -X POST
+  -H "Content-Type: application/json"
+  -d '{
+         "otpNumber":"{otpNumber}",
+         "thaiId":"3670301396484",
+         "email":"megaspeed@example.com",
+         "mobile":"0879630303",
+         "password":"123456",
+         "firstName":"ฝอย",
+         "lastName":"ขัดหม้อ",
+         "birthDate":"03/04/2015",
+         "registerChannel":"MOBILE",
+         "title":{
+            "id":1
+         }
+      }'
+```
+
+> Response
+
+```json
+{
+    "id": 33,
+    "thaiId": "3670301396484",
+    "email": "megaspeed@example.com",
+    "mobile": "0879630303",
+    "firstName": "ฝอย",
+    "lastName": "ขัดหม้อ",
+    "title": {
+        "id": 1,
+        "nameTh": "นาย",
+        "nameEn": "Mr.",
+        "gender": "MALE"
+    },
+    "birthDate": "03/04/2015",
+    "registerChannel": "MOBILE",
+    "phone": null,
+    "addresses": [],
+    "cpOneCard": {
+        "id": 33,
+        "cardNumber": "0001000000000033",
+        "cardLevel": {
+            "id": 1,
+            "name": "Normal"
+        },
+        "expiryDate": "28/05/2016"
+    }
+}
+```
+
+### Request
+`POST https://api.cpone-dev.com/customers/register`
+
+### Query Parameters
+TYPE | Params | Value | Detail
+---- | ------ | ----- | ------
+HEAD | Content-Type | String | Fix value to "application/json"
+POST | otpNumber | String | [Send OTP](#send-otp)
+POST | thaiId | String |
+POST | email | String |
+POST | mobile | String |
+POST | password | String |
+POST | firstName | String |
+POST | lastName | String |
+POST | birthDate | Date | Format : dd/MM/yyyy
+POST | registerChannel | String | Accept : MOBILE,WEB,CALL
+POST | title | Object | see. Title Object table
+
+### Title Object
+TYPE | Params | Value | Detail
+---- | ------ | ----- | ------
+POST | id | Number | 1=Mr. 2=Mrs. 3=Ms. 4=Mstr. 5=Miss
+
+# Send OTP
+> Request Send OTP
+
+```shell
+curl https://api.cpone-dev.com/otp/request
+  -X POST
+  -d mobile={mobile} 
+```
+
+### Request
+`POST https://api.cpone-dev.com/otp/request`
+
+### Query Parameters
+TYPE | Params | Value | Detail
+---- | ------ | ----- | ------
+POST | mobile | String | 
+
+# Logout
+> Request Logout
+
+```shell
+curl https://api.cpone-dev.com/logout
+  -X POST
+  -H "Authorization: bearer {access_token}"
+```
+
+### Request
+`POST https://api.cpone-dev.com/logout`
+
+### Query Parameters
+TYPE | Params | Value | Detail
+---- | ------ | ----- | ------
+HEAD | Authorization | String | access token from [Authentication](#authentication)
+
+# Customer
+## Get Profile
+> Request Get Profile
+
+```shell
+curl https://api.cpone-dev.com/customers
+  -X GET
+  -H "Authorization: bearer {access_token}"
+```
+
+> Response
+
+```json
+{
+    "id": 33,
+    "thaiId": "3670301396484",
+    "email": "megaspeed@example.com",
+    "mobile": "0879630303",
+    "firstName": "ฝอย",
+    "lastName": "ขัดหม้อ",
+    "title": {
+        "id": 1,
+        "nameTh": "นาย",
+        "nameEn": "Mr.",
+        "gender": "MALE"
+    },
+    "birthDate": "03/04/2015",
+    "registerChannel": "MOBILE",
+    "phone": null,
+    "addresses": [],
+    "cpOneCard": {
+        "id": 33,
+        "cardNumber": "0001000000000033",
+        "cardLevel": {
+            "id": 1,
+            "name": "Normal"
+        },
+        "expiryDate": "28/05/2016"
+    }
+}
+```
+
+### Request
+`GET https://api.cpone-dev.com/customers`
+
+### Query Parameters
+TYPE | Params | Value | Detail
+---- | ------ | ----- | ------
+HEAD | Authorization | String | access token from [Authentication](#authentication)
+
+## Get Profile Image
+> Request Get Profile Image
+
+```shell
+curl https://api.cpone-dev.com/customers/image
+  -X GET
+  -H "Authorization: bearer {access_token}"
+```
+
+### Request
+`GET https://api.cpone-dev.com/customers/image`
+
+### Query Parameters
+TYPE | Params | Value | Detail
+---- | ------ | ----- | ------
+HEAD | Authorization | String | access token from [Authentication](#authentication)
+
+# Forgot Password
+## Find Mobile
+## Verify OTP
+## Change Password
