@@ -54,7 +54,42 @@ POST | password | String |
 You must replace <code>{client_id}</code> and <code>{client_secret}</code> with your personal API key.
 </aside>
 
-# Register
+# Logout
+> Request Logout
+
+```shell
+curl https://api.cpone-dev.com/logout
+  -X POST
+  -H "Authorization: bearer {access_token}"
+```
+
+### Request
+`POST https://api.cpone-dev.com/logout`
+
+### Query Parameters
+TYPE | Params | Value | Detail
+---- | ------ | ----- | ------
+HEAD | Authorization | String | access token from [Authentication](#authentication)
+
+# Send OTP
+> Request Send OTP
+
+```shell
+curl https://api.cpone-dev.com/otp/request
+  -X POST
+  -d mobile={mobile} 
+```
+
+### Request
+`POST https://api.cpone-dev.com/otp/request`
+
+### Query Parameters
+TYPE | Params | Value | Detail
+---- | ------ | ----- | ------
+POST | mobile | String | 
+
+# Customer
+## Register
 
 > Request Send Register Data
 
@@ -133,41 +168,6 @@ TYPE | Params | Value | Detail
 ---- | ------ | ----- | ------
 POST | id | Number | 1=Mr. 2=Mrs. 3=Ms. 4=Mstr. 5=Miss
 
-# Send OTP
-> Request Send OTP
-
-```shell
-curl https://api.cpone-dev.com/otp/request
-  -X POST
-  -d mobile={mobile} 
-```
-
-### Request
-`POST https://api.cpone-dev.com/otp/request`
-
-### Query Parameters
-TYPE | Params | Value | Detail
----- | ------ | ----- | ------
-POST | mobile | String | 
-
-# Logout
-> Request Logout
-
-```shell
-curl https://api.cpone-dev.com/logout
-  -X POST
-  -H "Authorization: bearer {access_token}"
-```
-
-### Request
-`POST https://api.cpone-dev.com/logout`
-
-### Query Parameters
-TYPE | Params | Value | Detail
----- | ------ | ----- | ------
-HEAD | Authorization | String | access token from [Authentication](#authentication)
-
-# Customer
 ## Get Profile
 > Request Get Profile
 
@@ -233,6 +233,25 @@ curl https://api.cpone-dev.com/customers/image
 TYPE | Params | Value | Detail
 ---- | ------ | ----- | ------
 HEAD | Authorization | String | access token from [Authentication](#authentication)
+
+## Upload Profile Image
+> Request Upload Profile Image
+
+```shell
+curl https://api.cpone-dev.com/customers/image/upload
+  -X POST
+  -H "Authorization: bearer {access_token}"
+  -F "file=@{file}"
+```
+
+### Request
+`POST https://api.cpone-dev.com/customers/image/upload`
+
+### Query Parameters
+TYPE | Params | Value | Detail
+---- | ------ | ----- | ------
+HEAD | Authorization | String | access token from [Authentication](#authentication)
+POST | file | File | image file for upload
 
 # Forgot Password
 ## Find Mobile
