@@ -324,7 +324,7 @@ curl https://api.cpone-dev.com/pre-update-email/
 
 > Response
 
-http status 200
+
 
 ### Request
 `POST https://api.cpone-dev.com/pre-update-email/`
