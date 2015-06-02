@@ -309,8 +309,8 @@ POST | file | File | image file for upload
 ## Verify OTP
 ## Change Password
 
-## Validate Email for update
-> Request Validate Email
+## Update Email Validation
+> Request Update Email Validation
 
 ```shell
 curl https://api.cpone-dev.com/pre-update-email/
