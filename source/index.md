@@ -89,6 +89,57 @@ TYPE | Params | Value | Detail
 POST | mobile | String | 
 
 # Customer
+
+## Register Validation
+
+> Request Send Register Data
+
+```shell
+curl https://api.cpone-dev.com/customers/pre-register
+  -X POST
+  -H "Content-Type: application/json"
+  -d '{
+         "otpNumber":"{otpNumber}",
+         "thaiId":"3670301396484",
+         "email":"megaspeed@example.com",
+         "mobile":"0879630303",
+         "password":"123456",
+         "firstName":"ฝอย",
+         "lastName":"ขัดหม้อ",
+         "birthDate":"03/04/2015",
+         "registerChannel":"MOBILE",
+         "title":{
+            "id":1
+         }
+      }'
+```
+
+> Response
+
+
+### Request
+`POST https://api.cpone-dev.com/customers/pre-register`
+
+### Query Parameters
+TYPE | Params | Value | Detail
+---- | ------ | ----- | ------
+HEAD | Content-Type | String | Fix value to "application/json"
+POST | otpNumber | String | [Send OTP](#send-otp)
+POST | thaiId | String |
+POST | email | String |
+POST | mobile | String |
+POST | password | String |
+POST | firstName | String |
+POST | lastName | String |
+POST | birthDate | Date | Format : dd/MM/yyyy
+POST | registerChannel | String | Accept : MOBILE,WEB,CALL
+POST | title | Object | see. Title Object table
+
+### Title Object
+TYPE | Params | Value | Detail
+---- | ------ | ----- | ------
+POST | id | Number | 1=Mr. 2=Mrs. 3=Ms. 4=Mstr. 5=Miss
+
 ## Register
 
 > Request Send Register Data
@@ -147,56 +198,6 @@ curl https://api.cpone-dev.com/customers/register
 
 ### Request
 `POST https://api.cpone-dev.com/customers/register`
-
-### Query Parameters
-TYPE | Params | Value | Detail
----- | ------ | ----- | ------
-HEAD | Content-Type | String | Fix value to "application/json"
-POST | otpNumber | String | [Send OTP](#send-otp)
-POST | thaiId | String |
-POST | email | String |
-POST | mobile | String |
-POST | password | String |
-POST | firstName | String |
-POST | lastName | String |
-POST | birthDate | Date | Format : dd/MM/yyyy
-POST | registerChannel | String | Accept : MOBILE,WEB,CALL
-POST | title | Object | see. Title Object table
-
-### Title Object
-TYPE | Params | Value | Detail
----- | ------ | ----- | ------
-POST | id | Number | 1=Mr. 2=Mrs. 3=Ms. 4=Mstr. 5=Miss
-
-## Register Validation
-
-> Request Send Register Data
-
-```shell
-curl https://api.cpone-dev.com/customers/pre-register
-  -X POST
-  -H "Content-Type: application/json"
-  -d '{
-         "otpNumber":"{otpNumber}",
-         "thaiId":"3670301396484",
-         "email":"megaspeed@example.com",
-         "mobile":"0879630303",
-         "password":"123456",
-         "firstName":"ฝอย",
-         "lastName":"ขัดหม้อ",
-         "birthDate":"03/04/2015",
-         "registerChannel":"MOBILE",
-         "title":{
-            "id":1
-         }
-      }'
-```
-
-> Response
-
-
-### Request
-`POST https://api.cpone-dev.com/customers/pre-register`
 
 ### Query Parameters
 TYPE | Params | Value | Detail
