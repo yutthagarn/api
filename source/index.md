@@ -194,7 +194,6 @@ curl https://api.cpone-dev.com/customers/pre-register
 
 > Response
 
-http status 200
 
 ### Request
 `POST https://api.cpone-dev.com/customers/pre-register`
