@@ -257,3 +257,30 @@ POST | file | File | image file for upload
 ## Find Mobile
 ## Verify OTP
 ## Change Password
+
+## Validate Email for update
+> Request Validate Email
+
+```shell
+curl https://api.cpone-dev.com/pre-update-email/
+  -X POST
+  -H "Authorization: bearer {access_token}"
+  -d '{
+		"email" : "a@a.com",
+		"password" : "1234"
+	}'
+```
+
+> Response
+
+http status 200
+
+### Request
+`POST https://api.cpone-dev.com/pre-update-email/`
+
+### Query Parameters
+TYPE | Params | Value | Detail
+---- | ------ | ----- | ------
+HEAD | Content-Type | String | Fix value to "application/json"
+POST | email | String | 
+POST | password | String | 
