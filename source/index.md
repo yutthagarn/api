@@ -315,6 +315,7 @@ POST | file | File | image file for upload
 curl https://api.cpone-dev.com/pre-update-email/
   -X POST
   -H "Authorization: bearer {access_token}"
+  -H "Content-Type: application/json"
   -d '{
 		"email" : "a@a.com",
 		"password" : "1234"
