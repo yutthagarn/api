@@ -6,6 +6,7 @@ search: true
 
 # Authentication
 
+## Get Token
 > Basic Authen
 
 ```shell
@@ -49,6 +50,43 @@ HEAD | Authorization | String | CLIENT_ID:CLIENT_SECRET base64 encrypt
 POST | grant_type | String | Fix value to "password"
 POST | username | String |
 POST | password | String |
+
+<aside class="notice">
+You must replace <code>{client_id}</code> and <code>{client_secret}</code> with your personal API key.
+</aside>
+
+## Refresh Token
+
+> Request Refresh Token
+
+```shell
+curl {client_id}:{client_secret}@https://api.cpone-dev.com/oauth/token 
+  -X POST
+  -d grant_type=refresh_token 
+  -d refresh_token={refresh_token} 
+```
+
+> Response
+
+```json
+{
+    "access_token": "31a3f8dd-4727-4215-9d8d-659393f698e8",
+    "token_type": "bearer",
+    "refresh_token": "0626a0d1-5a93-4e43-9fb9-0a2c38945718",
+    "expires_in": 43199,
+    "scope": "global"
+}
+```
+
+### Request
+`POST https://api.cpone-dev.com/oauth/token`
+
+### Query Parameters
+TYPE | Params | Value | Detail
+---- | ------ | ----- | ------
+HEAD | Authorization | String | CLIENT_ID:CLIENT_SECRET base64 encrypt
+POST | grant_type | String | Fix value to "refresh_token"
+POST | refresh_token | String | refresh_token value get from [Get Token](#get-token)
 
 <aside class="notice">
 You must replace <code>{client_id}</code> and <code>{client_secret}</code> with your personal API key.
