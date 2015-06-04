@@ -342,8 +342,8 @@ TYPE | Params | Value | Detail
 HEAD | Authorization | String | access token from [Authentication](#authentication)
 POST | file | File | image file for upload
 
-## Titles
-> Request Get Titles
+## All Titles
+> Request Get All Titles
 
 ```shell
 curl https://api.cpone-dev.com/titles
