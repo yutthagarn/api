@@ -392,7 +392,7 @@ TYPE | Params | Value | Detail
 HEAD | Authorization | String | access token from [Authentication](#authentication)
 
 ## Title
-> Request Get Titles by ID
+> Request Get Title by ID
 
 ```shell
 curl https://api.cpone-dev.com/titles/1
