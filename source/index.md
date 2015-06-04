@@ -354,12 +354,33 @@ curl https://api.cpone-dev.com/titles
 > Response
 
 ```json
-{
+[ {
   "id" : 1,
   "nameTh" : "นาย",
   "nameEn" : "Mr.",
   "gender" : "MALE"
-}
+}, {
+  "id" : 2,
+  "nameTh" : "นาง",
+  "nameEn" : "Mrs.",
+  "gender" : "FEMALE"
+}, {
+  "id" : 3,
+  "nameTh" : "นางสาว",
+  "nameEn" : "Ms.",
+  "gender" : "FEMALE"
+}, {
+  "id" : 4,
+  "nameTh" : "เด็กชาย",
+  "nameEn" : "Mstr.",
+  "gender" : "MALE"
+}, {
+  "id" : 5,
+  "nameTh" : "เด็กหญิง",
+  "nameEn" : "Miss",
+  "gender" : "FEMALE"
+} ]
+
 ```
 
 ### Request
