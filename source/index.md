@@ -391,6 +391,37 @@ TYPE | Params | Value | Detail
 ---- | ------ | ----- | ------
 HEAD | Authorization | String | access token from [Authentication](#authentication)
 
+## Title
+> Request Get Titles by ID
+
+```shell
+curl https://api.cpone-dev.com/titles/1
+  -X GET
+  -H "Authorization: bearer {access_token}"
+```
+
+> Response
+
+```json
+{
+  "id" : 1,
+  "nameTh" : "นาย",
+  "nameEn" : "Mr.",
+  "gender" : "MALE"
+}
+
+
+```
+
+### Request
+`GET https://api.cpone-dev.com/titles/{1}`
+
+### Query Parameters
+TYPE | Params | Value | Detail
+---- | ------ | ----- | ------
+HEAD | Authorization | String | access token from [Authentication](#authentication)
+PATH | id | Number |
+
 # Forgot Password
 ## Find Mobile
 ## Verify OTP
