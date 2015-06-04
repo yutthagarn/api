@@ -342,6 +342,34 @@ TYPE | Params | Value | Detail
 HEAD | Authorization | String | access token from [Authentication](#authentication)
 POST | file | File | image file for upload
 
+## Titles
+> Request Get Titles
+
+```shell
+curl https://api.cpone-dev.com/titles
+  -X GET
+  -H "Authorization: bearer {access_token}"
+```
+
+> Response
+
+```json
+{
+  "id" : 1,
+  "nameTh" : "นาย",
+  "nameEn" : "Mr.",
+  "gender" : "MALE"
+}
+```
+
+### Request
+`GET https://api.cpone-dev.com/titles`
+
+### Query Parameters
+TYPE | Params | Value | Detail
+---- | ------ | ----- | ------
+HEAD | Authorization | String | access token from [Authentication](#authentication)
+
 # Forgot Password
 ## Find Mobile
 ## Verify OTP
