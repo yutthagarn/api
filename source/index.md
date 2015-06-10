@@ -422,6 +422,34 @@ TYPE | Params | Value | Detail
 HEAD | Authorization | String | access token from [Authentication](#authentication)
 PATH | id | Number |
 
+## Update password
+> Request Update password
+
+```shell
+curl https://api.cpone-dev.com/update-password
+  -X POST
+  -H "Authorization: bearer {access_token}"
+  -H "Content-Type: application/json"
+  -d '{
+		   "oldPassword" : "password",
+		   "newPassword" : "newpassword"
+		}'
+```
+
+> Response
+
+
+### Request
+`POST https://api.cpone-dev.com/update-password`
+
+### Query Parameters
+TYPE | Params | Value | Detail
+---- | ------ | ----- | ------
+HEAD | Authorization | String | access token from [Authentication](#authentication)
+HEAD | Content-Type (application/json) | String |
+POST | oldPassword | String |
+POST | newPassword | String |
+
 # Forgot Password
 ## Find Mobile
 ## Verify OTP
