@@ -473,6 +473,32 @@ HEAD | Authorization | String | access token from [Authentication](#authenticati
 PATH | cponeId | String |
 
 ## Verify OTP
+> Request Verify OTP
+
+```shell
+curl https://api.cpone-dev.com/forgotpassword/verifyotp
+  -X POST
+  -H "Authorization: bearer {access_token}"
+  -H "Content-Type: application/json"   
+  -d '{ 		   
+		"mobile" : "{mobile number from find mobile}",
+		"otpNumber" : "{otp number}" 		
+	}'
+```
+
+> Response
+
+### Request
+`POST https://api.cpone-dev.com/forgotpassword/verifyotp`
+
+### Query Parameters
+TYPE | Params | Value | Detail
+---- | ------ | ----- | ------
+HEAD | Authorization | String | access token from [Authentication](#authentication)
+HEAD | Content-Type | String | Fix value to "application/json"
+POST | mobile | Number |
+POST | otpNumber | Number |
+
 ## Change Password
 
 ## Update Email Validation
