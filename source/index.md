@@ -457,7 +457,6 @@ POST | newPassword | String |
 ```shell
 curl https://api.cpone-dev.com/forgotpassword/0812345678/findmobile
   -X GET
-  -H "Authorization: bearer {access_token}"
 ```
 
 > Response
@@ -469,7 +468,6 @@ curl https://api.cpone-dev.com/forgotpassword/0812345678/findmobile
 ### Query Parameters
 TYPE | Params | Value | Detail
 ---- | ------ | ----- | ------
-HEAD | Authorization | String | access token from [Authentication](#authentication)
 PATH | cponeId | String |
 
 ## Verify OTP
@@ -478,7 +476,6 @@ PATH | cponeId | String |
 ```shell
 curl https://api.cpone-dev.com/forgotpassword/verifyotp
   -X POST
-  -H "Authorization: bearer {access_token}"
   -H "Content-Type: application/json"   
   -d '{ 		   
 		"mobile" : "{mobile number from find mobile}",
@@ -494,7 +491,6 @@ curl https://api.cpone-dev.com/forgotpassword/verifyotp
 ### Query Parameters
 TYPE | Params | Value | Detail
 ---- | ------ | ----- | ------
-HEAD | Authorization | String | access token from [Authentication](#authentication)
 HEAD | Content-Type | String | Fix value to "application/json"
 POST | mobile | Number |
 POST | otpNumber | Number |
