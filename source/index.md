@@ -446,7 +446,7 @@ curl https://api.cpone-dev.com/update-password
 TYPE | Params | Value | Detail
 ---- | ------ | ----- | ------
 HEAD | Authorization | String | access token from [Authentication](#authentication)
-HEAD | Content-Type (application/json) | String |
+HEAD | Content-Type | String | Fix value to "application/json"
 POST | oldPassword | String |
 POST | newPassword | String |
 
