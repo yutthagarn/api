@@ -452,6 +452,26 @@ POST | newPassword | String |
 
 # Forgot Password
 ## Find Mobile
+> Request Find Mobile
+
+```shell
+curl https://api.cpone-dev.com/forgotpassword/0812345678/findmobile
+  -X GET
+  -H "Authorization: bearer {access_token}"
+```
+
+> Response
+0812345678
+
+### Request
+`GET https://api.cpone-dev.com/forgotpassword/{cponeId}/findmobile`
+
+### Query Parameters
+TYPE | Params | Value | Detail
+---- | ------ | ----- | ------
+HEAD | Authorization | String | access token from [Authentication](#authentication)
+PATH | cponeId | String |
+
 ## Verify OTP
 ## Change Password
 
