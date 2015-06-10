@@ -454,3 +454,22 @@ TYPE | Params | Value | Detail
 HEAD | Content-Type | String | Fix value to "application/json"
 POST | email | String | 
 POST | password | String | 
+
+## Upload Receipt Image
+> Request Upload Receipt Image
+
+```shell
+curl https://api.cpone-dev.com/upload-receipt
+  -X POST
+  -H "Authorization: bearer {access_token}"
+  -F "file=@{file}"
+```
+
+### Request
+`POST https://api.cpone-dev.com/upload-receipt`
+
+### Query Parameters
+TYPE | Params | Value | Detail
+---- | ------ | ----- | ------
+HEAD | Authorization | String | access token from [Authentication](#authentication)
+POST | file | File | image file for upload
