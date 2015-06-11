@@ -722,7 +722,7 @@ curl https://api.cpone-dev.com/customers/image/upload
 TYPE | Params | Value | Detail
 ---- | ------ | ----- | ------
 HEAD | Authorization | String | Access token from [Authentication](#authentication)
-POST | file | File | Max file size 3 MB<br/>Allowed extension : ".png", ".jpg", ".jpeg"
+POST | file | File | Max file size 3 MB<br/>Allowed extension: ".png", ".jpg", ".jpeg"
 
 ## Update Password
 > Request Update Password
@@ -904,4 +904,4 @@ curl https://api.cpone-dev.com/upload-receipt
 TYPE | Params | Value | Detail
 ---- | ------ | ----- | ------
 HEAD | Authorization | String | access token from [Authentication](#authentication)
-POST | file | File | Max file size 3 MB<br/>Allowed extension : ".png", ".jpg", ".jpeg"
+POST | file | File | Max file size 3 MB<br/>Allowed extension: ".png", ".jpg", ".jpeg"
