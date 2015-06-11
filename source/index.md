@@ -508,6 +508,17 @@ TYPE | Params | Value | Detail
 ---- | ------ | ----- | ------
 POST | mobile | String | Numeric 10 digits.
 
+### Response
+#### Error Example
+{
+  "violations" : [ {
+    "code" : "SIZ-10070",
+    "field" : "request.mobile",
+    "message" : "จำนวนตัวเลขเบอร์โทรศัพท์ไม่ถูกต้อง (10 หลัก)"
+  } ],
+  "error" : "Validation Failure"
+}
+
 # Customer
 
 ## Register Validation
