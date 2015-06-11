@@ -798,6 +798,31 @@ POST | mobile | Number |
 POST | otpNumber | Number |
 
 ## Change Password
+> Request Change Password
+
+```shell
+curl https://api.cpone-dev.com/forgotpassword/changepassword/
+  -X POST
+  -H "Content-Type: application/json"   
+  -d '{
+		"mobile" : "{mobile number}",
+		"otpNumber" : "{opt number}",
+		"password" : "{new password}"
+	}'
+```
+
+> Response
+
+### Request
+`POST https://api.cpone-dev.com/forgotpassword/changepassword/`
+
+### Query Parameters
+TYPE | Params | Value | Detail
+---- | ------ | ----- | ------
+HEAD | Content-Type | String | Fix value to "application/json"
+POST | mobile | Number |
+POST | otpNumber | Number |
+POST | password | Number |
 
 ## Update Email Validation
 > Request Update Email Validation
