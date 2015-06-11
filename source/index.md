@@ -822,7 +822,7 @@ TYPE | Params | Value | Detail
 HEAD | Content-Type | String | Fix value to "application/json"
 POST | mobile | Number |
 POST | otpNumber | Number |
-POST | password | Number |
+POST | password | String |
 
 ## Update Email Validation
 > Request Update Email Validation
