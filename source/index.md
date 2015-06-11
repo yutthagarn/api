@@ -871,7 +871,7 @@ POST | mobile | Number |
 POST | otpNumber | Number |
 POST | password | String |
 
-# Update Email Validation
+## Update Email Validation
 > Request Update Email Validation
 
 ```shell
@@ -898,7 +898,7 @@ HEAD | Content-Type | String | Fix value to "application/json"
 POST | email | String | 
 POST | password | String | 
 
-# Upload Receipt Image
+## Upload Receipt Image
 > Request Upload Receipt Image
 
 ```shell
