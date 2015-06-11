@@ -489,7 +489,7 @@ curl https://api.cpone-dev.com/logout
 ### Query Parameters
 TYPE | Params | Value | Detail
 ---- | ------ | ----- | ------
-HEAD | Authorization | String | access token from [Authentication](#authentication)
+HEAD | Authorization | String | Access token from [Authentication](#authentication)
 
 # Send OTP
 > Request Send OTP
@@ -546,14 +546,14 @@ TYPE | Params | Value | Detail
 HEAD | Content-Type | String | Fix value to "application/json"
 POST | otpNumber | String | [Send OTP](#send-otp)
 POST | thaiId | String | Numeric 13 digits.
-POST | email | String | *Optional parameter.
+POST | email | String | *Optional parameter.<br/>Standard email format.<br/>Max 100 characters.
 POST | mobile | String | Numeric 10 digits.
 POST | password | String | Allowed characters: A-Z, a-z, 0-9
-POST | firstName | String | Thai or English characters, Max 50 characters.
-POST | lastName | String | Thai or English characters, Max 50 characters.
+POST | firstName | String | Thai or English characters.<br/>Max 50 characters.
+POST | lastName | String | Thai or English characters.<br/>Max 50 characters.
 POST | birthDate | Date | Format: dd/MM/yyyy
 POST | registerChannel | String | Accept: MOBILE, WEB, CALL
-POST | title | Object | See: Title Object table
+POST | title | Object | See: Title Object table.
 
 ### Title Object
 TYPE | Params | Value | Detail
@@ -625,14 +625,14 @@ TYPE | Params | Value | Detail
 HEAD | Content-Type | String | Fix value to "application/json"
 POST | otpNumber | String | [Send OTP](#send-otp)
 POST | thaiId | String | Numeric 13 digits.
-POST | email | String | *Optional parameter.
+POST | email | String | *Optional parameter.<br/>Standard email format.<br/>Max 100 characters.
 POST | mobile | String | Numeric 10 digits.
 POST | password | String | Allowed characters: A-Z, a-z, 0-9
-POST | firstName | String | Thai or English characters, Max 50 characters.
-POST | lastName | String | Thai or English characters, Max 50 characters.
+POST | firstName | String | Thai or English characters.<br/>Max 50 characters.
+POST | lastName | String | Thai or English characters.<br/>Max 50 characters.
 POST | birthDate | Date | Format: dd/MM/yyyy
 POST | registerChannel | String | Accept: MOBILE,WEB,CALL
-POST | title | Object | See: Title Object table
+POST | title | Object | See: Title Object table.
 
 ### Title Object
 TYPE | Params | Value | Detail
@@ -686,7 +686,7 @@ curl https://api.cpone-dev.com/customers
 ### Query Parameters
 TYPE | Params | Value | Detail
 ---- | ------ | ----- | ------
-HEAD | Authorization | String | access token from [Authentication](#authentication)
+HEAD | Authorization | String | Access token from [Authentication](#authentication)
 
 ## Get Profile Image
 > Request Get Profile Image
@@ -703,7 +703,7 @@ curl https://api.cpone-dev.com/customers/image
 ### Query Parameters
 TYPE | Params | Value | Detail
 ---- | ------ | ----- | ------
-HEAD | Authorization | String | access token from [Authentication](#authentication)
+HEAD | Authorization | String | Access token from [Authentication](#authentication)
 
 ## Upload Profile Image
 > Request Upload Profile Image
@@ -721,7 +721,7 @@ curl https://api.cpone-dev.com/customers/image/upload
 ### Query Parameters
 TYPE | Params | Value | Detail
 ---- | ------ | ----- | ------
-HEAD | Authorization | String | access token from [Authentication](#authentication)
+HEAD | Authorization | String | Access token from [Authentication](#authentication)
 POST | file | File | Max file size 3 MB<br/>Allowed extension : ".png", ".jpg", ".jpeg"
 
 ## Update Password
@@ -747,10 +747,10 @@ curl https://api.cpone-dev.com/update-password
 ### Query Parameters
 TYPE | Params | Value | Detail
 ---- | ------ | ----- | ------
-HEAD | Authorization | String | access token from [Authentication](#authentication)
+HEAD | Authorization | String | Access token from [Authentication](#authentication)
 HEAD | Content-Type | String | Fix value to "application/json"
 POST | oldPassword | String |
-POST | newPassword | String | must not be closely similar to a previously used password.<br/>Allowed characters: A-Z, a-z, 0-9
+POST | newPassword | String | Must not be closely similar to a previously used password.<br/>Allowed characters: A-Z, a-z, 0-9
 
 ## Update Profile
 > Request Update Profile
@@ -780,13 +780,13 @@ curl https://api.cpone-dev.com/update-profile
 ### Query Parameters
 TYPE | Params | Value | Detail
 ---- | ------ | ----- | ------
-HEAD | Authorization | String | access token from [Authentication](#authentication)
+HEAD | Authorization | String | Access token from [Authentication](#authentication)
 HEAD | Content-Type | String | Fix value to "application/json"
-POST | firstName | String | Thai or English characters, Max 50 characters
-POST | lastName | String | Thai or English characters, Max 50 characters
+POST | firstName | String | Thai or English characters.<br/>Max 50 characters.
+POST | lastName | String | Thai or English characters.<br/>Max 50 characters.
 POST | birthDate | Date | Format: dd/MM/yyyy
-POST | phone | String | Max 20 digits
-POST | title | Object | See: Title Object table
+POST | phone | String | Max 20 digits.
+POST | title | Object | See: Title Object table.
 
 # Forgot Password
 ## Find Mobile
