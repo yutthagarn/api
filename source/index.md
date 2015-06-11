@@ -4,6 +4,388 @@ title: API Reference
 search: true
 ---
 
+# Master Data
+
+## All Titles
+> Request Get All Titles
+
+```shell
+curl https://api.cpone-dev.com/public/titles
+  -X GET
+```
+
+> Response
+
+```json
+[ {
+  "id" : 1,
+  "nameTh" : "นาย",
+  "nameEn" : "Mr.",
+  "gender" : "MALE"
+}, {
+  "id" : 2,
+  "nameTh" : "นาง",
+  "nameEn" : "Mrs.",
+  "gender" : "FEMALE"
+}, {
+  "id" : 3,
+  "nameTh" : "นางสาว",
+  "nameEn" : "Ms.",
+  "gender" : "FEMALE"
+}, {
+  "id" : 4,
+  "nameTh" : "เด็กชาย",
+  "nameEn" : "Mstr.",
+  "gender" : "MALE"
+}, {
+  "id" : 5,
+  "nameTh" : "เด็กหญิง",
+  "nameEn" : "Miss",
+  "gender" : "FEMALE"
+} ]
+```
+
+### Request
+`GET https://api.cpone-dev.com/public/titles`
+
+## Title
+> Request Get Title by ID
+
+```shell
+curl https://api.cpone-dev.com/public/titles/1
+  -X GET
+```
+
+> Response
+
+```json
+{
+  "id" : 1,
+  "nameTh" : "นาย",
+  "nameEn" : "Mr.",
+  "gender" : "MALE"
+}
+```
+
+### Request
+`GET https://api.cpone-dev.com/public/titles/{id}`
+
+### Query Parameters
+TYPE | Params | Value | Detail
+---- | ------ | ----- | ------
+PATH | id | Number | The title id.
+
+## All Provinces
+> Request Get All Provinces
+
+```shell
+curl https://api.cpone-dev.com/public/provinces
+  -X GET
+```
+
+> Response
+
+```json
+[ {
+  "id" : 1,
+  "name" : "กรุงเทพฯ"
+}, {
+  "id" : 2,
+  "name" : "นครปฐม"
+} ]
+```
+
+### Request
+`GET https://api.cpone-dev.com/public/provinces`
+
+<aside class="notice">
+All Provinces sort by name
+</aside>
+
+## Province
+> Request Get Province by ID
+
+```shell
+curl https://api.cpone-dev.com/public/provinces/1
+  -X GET
+```
+
+> Response
+
+```json
+{
+  "id" : 1,
+  "name" : "กรุงเทพฯ"
+}
+```
+
+### Request
+`GET https://api.cpone-dev.com/public/provinces/{id}`
+
+### Query Parameters
+TYPE | Params | Value | Detail
+---- | ------ | ----- | ------
+PATH | id | Number | The province id.
+
+## All Districts in Province
+> Request Get All Districts by Province ID
+
+```shell
+curl https://api.cpone-dev.com/public/provinces/1/districts
+  -X GET
+```
+
+> Response
+
+```json
+[ {
+  "id" : 1,
+  "name" : "ดินแดง"
+}, {
+  "id" : 2,
+  "name" : "ห้วยขวาง"
+} ]
+```
+
+### Request
+`GET https://api.cpone-dev.com/public/provinces/{id}/districts`
+
+### Query Parameters
+TYPE | Params | Value | Detail
+---- | ------ | ----- | ------
+PATH | id | Number | The province id.
+
+<aside class="notice">
+All Districts sort by name
+</aside>
+
+## All Districts
+> Request Get All Districts
+
+```shell
+curl https://api.cpone-dev.com/public/districts
+  -X GET
+```
+
+> Response
+
+```json
+[ {
+  "id" : 1,
+  "name" : "ดินแดง"
+}, {
+  "id" : 3,
+  "name" : "พุทธมณฑล"
+}, {
+  "id" : 4,
+  "name" : "สามพราน"
+}, {
+  "id" : 2,
+  "name" : "ห้วยขวาง"
+} ]
+```
+
+### Request
+`GET https://api.cpone-dev.com/public/districts`
+
+<aside class="notice">
+All Districts sort by name
+</aside>
+
+## District
+> Request Get District by ID
+
+```shell
+curl https://api.cpone-dev.com/public/districts/1
+  -X GET
+```
+
+> Response
+
+```json
+{
+  "id" : 1,
+  "name" : "ดินแดง"
+}
+```
+
+### Request
+`GET https://api.cpone-dev.com/public/districts/{id}`
+
+### Query Parameters
+TYPE | Params | Value | Detail
+---- | ------ | ----- | ------
+PATH | id | Number | The district id.
+
+## All Sub-Districts in District
+> Request Get All Sub-Districts by District ID
+
+```shell
+curl https://api.cpone-dev.com/public/districts/1/subdistricts
+  -X GET
+```
+
+> Response
+
+```json
+[ {
+  "id" : 1,
+  "name" : "ดินแดง",
+  "postCode" : "10400"
+} ]
+```
+
+### Request
+`GET https://api.cpone-dev.com/public/districts/{id}/subdistricts`
+
+### Query Parameters
+TYPE | Params | Value | Detail
+---- | ------ | ----- | ------
+PATH | id | Number | The district id.
+
+<aside class="notice">
+All Sub-Districts sort by name
+</aside>
+
+## All Sub-Districts
+> Request Get All Sub-Districts
+
+```shell
+curl https://api.cpone-dev.com/public/subdistricts
+  -X GET
+```
+
+> Response
+
+```json
+[ {
+  "id" : 17,
+  "name" : "กระทุ่มล้ม",
+  "postCode" : "73220"
+}, {
+  "id" : 20,
+  "name" : "คลองจินดา",
+  "postCode" : "73110"
+}, {
+  "id" : 6,
+  "name" : "คลองโยง",
+  "postCode" : "73170"
+}, {
+  "id" : 18,
+  "name" : "คลองใหม่",
+  "postCode" : "73110"
+}, {
+  "id" : 1,
+  "name" : "ดินแดง",
+  "postCode" : "10400"
+}, {
+  "id" : 19,
+  "name" : "ตลาดจินดา",
+  "postCode" : "73110"
+}, {
+  "id" : 9,
+  "name" : "ทรงคนอง",
+  "postCode" : "73210"
+}, {
+  "id" : 8,
+  "name" : "ท่าข้าม",
+  "postCode" : "73110"
+}, {
+  "id" : 16,
+  "name" : "ท่าตลาด",
+  "postCode" : "73110"
+}, {
+  "id" : 11,
+  "name" : "บางกระทึก",
+  "postCode" : "73210"
+}, {
+  "id" : 3,
+  "name" : "บางกะปิ",
+  "postCode" : "10310"
+}, {
+  "id" : 14,
+  "name" : "บางช้าง",
+  "postCode" : "73110"
+}, {
+  "id" : 12,
+  "name" : "บางเตย",
+  "postCode" : "73210"
+}, {
+  "id" : 22,
+  "name" : "บ้านใหม่",
+  "postCode" : "73110"
+}, {
+  "id" : 7,
+  "name" : "มหาสวัสดิ์",
+  "postCode" : "73170"
+}, {
+  "id" : 21,
+  "name" : "ยายชา",
+  "postCode" : "73110"
+}, {
+  "id" : 5,
+  "name" : "ศาลายา",
+  "postCode" : "73170"
+}, {
+  "id" : 13,
+  "name" : "สามพราน",
+  "postCode" : "73110"
+}, {
+  "id" : 4,
+  "name" : "สามเสนนอก",
+  "postCode" : "10310"
+}, {
+  "id" : 10,
+  "name" : "หอมเกร็ด",
+  "postCode" : "73110"
+}, {
+  "id" : 2,
+  "name" : "ห้วยขวาง",
+  "postCode" : "10310"
+}, {
+  "id" : 23,
+  "name" : "อ้อมใหญ่",
+  "postCode" : "73160"
+}, {
+  "id" : 15,
+  "name" : "ไร่ขิง",
+  "postCode" : "73210"
+} ]
+```
+
+### Request
+`GET https://api.cpone-dev.com/public/subdistricts`
+
+<aside class="notice">
+All Sub-Districts sort by name
+</aside>
+
+## Sub-District
+> Request Get Sub-District by ID
+
+```shell
+curl https://api.cpone-dev.com/public/subdistricts/1
+  -X GET
+```
+
+> Response
+
+```json
+{
+  "id" : 1,
+  "name" : "ดินแดง",
+  "postCode" : "10400"
+}
+```
+
+### Request
+`GET https://api.cpone-dev.com/public/subdistricts/{id}`
+
+### Query Parameters
+TYPE | Params | Value | Detail
+---- | ------ | ----- | ------
+PATH | id | Number | The sub-district id.
+
 # Authentication
 
 ## Get Token
@@ -342,86 +724,6 @@ TYPE | Params | Value | Detail
 HEAD | Authorization | String | access token from [Authentication](#authentication)
 POST | file | File | image file for upload
 
-## All Titles
-> Request Get All Titles
-
-```shell
-curl https://api.cpone-dev.com/titles
-  -X GET
-  -H "Authorization: bearer {access_token}"
-```
-
-> Response
-
-```json
-[ {
-  "id" : 1,
-  "nameTh" : "นาย",
-  "nameEn" : "Mr.",
-  "gender" : "MALE"
-}, {
-  "id" : 2,
-  "nameTh" : "นาง",
-  "nameEn" : "Mrs.",
-  "gender" : "FEMALE"
-}, {
-  "id" : 3,
-  "nameTh" : "นางสาว",
-  "nameEn" : "Ms.",
-  "gender" : "FEMALE"
-}, {
-  "id" : 4,
-  "nameTh" : "เด็กชาย",
-  "nameEn" : "Mstr.",
-  "gender" : "MALE"
-}, {
-  "id" : 5,
-  "nameTh" : "เด็กหญิง",
-  "nameEn" : "Miss",
-  "gender" : "FEMALE"
-} ]
-
-```
-
-### Request
-`GET https://api.cpone-dev.com/titles`
-
-### Query Parameters
-TYPE | Params | Value | Detail
----- | ------ | ----- | ------
-HEAD | Authorization | String | access token from [Authentication](#authentication)
-
-## Title
-> Request Get Title by ID
-
-```shell
-curl https://api.cpone-dev.com/titles/1
-  -X GET
-  -H "Authorization: bearer {access_token}"
-```
-
-> Response
-
-```json
-{
-  "id" : 1,
-  "nameTh" : "นาย",
-  "nameEn" : "Mr.",
-  "gender" : "MALE"
-}
-
-
-```
-
-### Request
-`GET https://api.cpone-dev.com/titles/{1}`
-
-### Query Parameters
-TYPE | Params | Value | Detail
----- | ------ | ----- | ------
-HEAD | Authorization | String | access token from [Authentication](#authentication)
-PATH | id | Number |
-
 ## Update password
 > Request Update password
 
@@ -431,9 +733,9 @@ curl https://api.cpone-dev.com/update-password
   -H "Authorization: bearer {access_token}"
   -H "Content-Type: application/json"
   -d '{
-		   "oldPassword" : "password",
-		   "newPassword" : "newpassword"
-		}'
+		"oldPassword" : "password",
+		"newPassword" : "newpassword"
+	}'
 ```
 
 > Response
@@ -512,7 +814,6 @@ curl https://api.cpone-dev.com/pre-update-email/
 ```
 
 > Response
-
 
 
 ### Request
