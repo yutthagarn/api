@@ -663,31 +663,47 @@ curl https://api.cpone-dev.com/customers
 
 ```json
 {
-    "id": 33,
-    "thaiId": "3670301396484",
-    "email": "megaspeed@example.com",
-    "mobile": "0879630303",
-    "firstName": "ฝอย",
-    "lastName": "ขัดหม้อ",
-    "title": {
-        "id": 1,
-        "nameTh": "นาย",
-        "nameEn": "Mr.",
-        "gender": "MALE"
-    },
-    "birthDate": "03/04/2015",
-    "registerChannel": "MOBILE",
-    "phone": null,
-    "addresses": [],
-    "cpOneCard": {
-        "id": 33,
-        "cardNumber": "0001000000000033",
-        "cardLevel": {
-            "id": 1,
-            "name": "Normal"
-        },
-        "expiryDate": "28/05/2016"
-    }
+	"customer": {
+	    "id": 33,
+	    "thaiId": "3670301396484",
+	    "email": "megaspeed@example.com",
+	    "mobile": "0879630303",
+	    "firstName": "ฝอย",
+	    "lastName": "ขัดหม้อ",
+	    "title": {
+	        "id": 1,
+	        "nameTh": "นาย",
+	        "nameEn": "Mr.",
+	        "gender": "MALE"
+	    },
+	    "birthDate": "03/04/2015",
+	    "registerChannel": "MOBILE",
+	    "phone": null,
+	    "addresses": [],
+	    "cpOneCard": {
+	        "id": 33,
+	        "cardNumber": "0001000000000033",
+	        "cardLevel": {
+	            "id": 1,
+	            "name": "Normal"
+	        },
+	        "expiryDate": "28/05/2016",
+	        "accumulateAmount": 0,
+	        "maxAccumulateAmount": 0
+	    },
+	    "optionCards": [ ],
+	    "points": [ ],
+	    "accumulatePoint": 0,
+	    "accumulatePointExpireDate": "31/12/2015",
+	    "accumulatePurchase": 0,
+	    "profileImagePath": "http://localhost:8080/customers/image"
+	},
+	"point": 999999,
+	"coupon": 999,
+	"notificationCount": 999,
+	"lastUpdatedRedeem": "17/06/2015 09:29:09",
+	"lastUpdatedGift": "17/06/2015 09:29:09",
+	"giftCount": 999
 }
 ```
 
