@@ -530,17 +530,17 @@ curl https://api.cpone-dev.com/customers/pre-register
   -X POST
   -H "Content-Type: application/json"
   -d '{
-         "otpNumber":"{otpNumber}",
-         "thaiId":"3670301396484",
-         "email":"megaspeed@example.com",
-         "mobile":"0879630303",
-         "password":"123456",
-         "firstName":"กุ๊ก",
-         "lastName":"กิ๊ก",
-         "birthDate":"03/04/2015",
-         "registerChannel":"MOBILE",
-         "title":{
-            "id":1
+         "otpNumber" : "{otpNumber}",
+         "thaiId" : "3670301396484",
+         "email" : "megaspeed@example.com",
+         "mobile" : "0879630303",
+         "password" : "123456",
+         "firstName" : "กุ๊ก",
+         "lastName" : "กิ๊ก",
+         "birthDate" : "03/04/2015",
+         "registerChannel" : "MOBILE",
+         "title" : {
+            "id" : 1
          }
       }'
 ```
@@ -745,6 +745,7 @@ curl https://api.cpone-dev.com/update-profile
 		"lastName" : "กิ๊ก",
 		"birthDate" : "12/03/2015",
 		"phone" : "021234567",
+		"email" : "megaspeed@example.com",
 		"title" : {
       			"id" : 2
    		}
@@ -766,6 +767,7 @@ POST | firstName | String | Thai or English characters.<br/>Max 50 characters.
 POST | lastName | String | Thai or English characters.<br/>Max 50 characters.
 POST | birthDate | Date | Format: dd/MM/yyyy
 POST | phone | String | Max 20 digits.
+POST | email | String | Standard email format.<br/>Max 100 characters.
 POST | title | Object | See: Title Object table.
 
 ## Upload Profile Image
