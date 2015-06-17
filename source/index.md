@@ -886,6 +886,60 @@ POST | subDistrictId | Number | Required.
 POST | postCode | String | Required.<br/>Numeric 5 digits.
 POST | addressType | String | Required.<br/>Accept: ID_CARD_ADDRESS, SHIPPING_ADDRESS
 
+## Update Email Validation
+> Request Update Email Validation
+
+```shell
+curl https://api.cpone-dev.com/pre-update-email
+  -X POST
+  -H "Authorization: bearer {access_token}"
+  -H "Content-Type: application/json"
+  -d '{
+		"email" : "a@a.com",
+		"password" : "1234"
+	}'
+```
+
+> Response
+
+
+### Request
+`POST https://api.cpone-dev.com/pre-update-email`
+
+### Query Parameters
+TYPE | Params | Value | Detail
+---- | ------ | ----- | ------
+HEAD | Content-Type | String | Fix value to "application/json"
+POST | email | String | 
+POST | password | String | 
+
+## Update Email
+> Request Update Email
+
+```shell
+curl https://api.cpone-dev.com/update-email
+  -X POST
+  -H "Authorization: bearer {access_token}"
+  -H "Content-Type: application/json"
+  -d '{
+		"email" : "a@a.com",
+		"password" : "1234"
+	}'
+```
+
+> Response
+
+
+### Request
+`POST https://api.cpone-dev.com/update-email`
+
+### Query Parameters
+TYPE | Params | Value | Detail
+---- | ------ | ----- | ------
+HEAD | Content-Type | String | Fix value to "application/json"
+POST | email | String | 
+POST | password | String | 
+
 # Forgot Password
 ## Find Mobile
 > Request Find Mobile
@@ -957,33 +1011,6 @@ HEAD | Content-Type | String | Fix value to "application/json"
 POST | mobile | Number |
 POST | otpNumber | Number |
 POST | password | String |
-
-# Update Email Validation
-> Request Update Email Validation
-
-```shell
-curl https://api.cpone-dev.com/pre-update-email/
-  -X POST
-  -H "Authorization: bearer {access_token}"
-  -H "Content-Type: application/json"
-  -d '{
-		"email" : "a@a.com",
-		"password" : "1234"
-	}'
-```
-
-> Response
-
-
-### Request
-`POST https://api.cpone-dev.com/pre-update-email/`
-
-### Query Parameters
-TYPE | Params | Value | Detail
----- | ------ | ----- | ------
-HEAD | Content-Type | String | Fix value to "application/json"
-POST | email | String | 
-POST | password | String | 
 
 # Upload Receipt Image
 > Request Upload Receipt Image
