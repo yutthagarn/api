@@ -799,6 +799,74 @@ POST | birthDate | Date | Format: dd/MM/yyyy
 POST | phone | String | Max 20 digits.
 POST | title | Object | See: Title Object table.
 
+## Update Address
+> Request Update Address
+
+```shell
+curl https://api.cpone-dev.com/update-address
+  -X POST
+  -H "Authorization: bearer {access_token}"
+  -H "Content-Type: application/json"
+  -d '{
+	    	"houseNo" : "11/12",
+	    	"villageNo" : "8",
+	    	"buildingVillage" : "ตึก AIA Capital Center",
+	    	"laneAlley" : "รัชดาซอย 4",
+	    	"road" : "ถนนรัชดาภิเษก",
+	    	"provinceId" : 1,
+	    	"districtId" : 1,
+	    	"subDistrictId" : 1,
+	    	"postCode" : "76543",
+	    	"addressType" : "ID_CARD_ADDRESS"
+	}'
+```
+
+> Response
+```json
+{
+	"id": 4,
+	"houseNo": "11/12",
+	"villageNo": "8",
+	"buildingVillage": "ตึก AIA Capital Center",
+	"laneAlley": "รัชดาซอย 4",
+	"road": "ถนนรัชดาภิเษก",
+	"province": {
+		"id": 1,
+		"name": "กรุงเทพฯ"
+	},
+	"district": {
+		"id": 1,
+		"name": "ดินแดง"
+	},
+	"subDistrict": {
+		"id": 1,
+		"name": "ดินแดง",
+		"postCode": "10400"
+	},
+	"postCode": "76543",
+	"addressType": "ID_CARD_ADDRESS"
+}
+```
+
+### Request
+`POST https://api.cpone-dev.com/update-address`
+
+### Query Parameters
+TYPE | Params | Value | Detail
+---- | ------ | ----- | ------
+HEAD | Authorization | String | Access token from [Authentication](#authentication)
+HEAD | Content-Type | String | Fix value to "application/json"
+POST | houseNo | String | Required.<br/>Max 10 characters.
+POST | villageNo | String | Max 10 characters.
+POST | buildingVillage | String | Max 50 characters.
+POST | laneAlley | String | Max 50 characters.
+POST | road | String | Max 50 characters.
+POST | provinceId | Number | Required.
+POST | districtId | Number | Required.
+POST | subDistrictId | Number | Required.
+POST | postCode | String | Required.<br/>Numeric 5 digits.
+POST | addressType | String | Required.<br/>Accept: ID_CARD_ADDRESS, SHIPPING_ADDRESS
+
 # Forgot Password
 ## Find Mobile
 > Request Find Mobile
