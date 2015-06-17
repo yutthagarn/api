@@ -732,6 +732,42 @@ TYPE | Params | Value | Detail
 ---- | ------ | ----- | ------
 HEAD | Authorization | String | Access token from [Authentication](#authentication)
 
+## Update Profile
+> Request Update Profile
+
+```shell
+curl https://api.cpone-dev.com/update-profile
+  -X POST
+  -H "Authorization: bearer {access_token}"
+  -H "Content-Type: application/json"
+  -d '{
+		"firstName" : "กุ๊ก",
+		"lastName" : "กิ๊ก",
+		"birthDate" : "12/03/2015",
+		"phone" : "021234567",
+		"title" : {
+      			"id" : 2
+   		}
+	}'
+```
+
+> Response
+
+
+### Request
+`POST https://api.cpone-dev.com/update-profile`
+
+### Query Parameters
+TYPE | Params | Value | Detail
+---- | ------ | ----- | ------
+HEAD | Authorization | String | Access token from [Authentication](#authentication)
+HEAD | Content-Type | String | Fix value to "application/json"
+POST | firstName | String | Thai or English characters.<br/>Max 50 characters.
+POST | lastName | String | Thai or English characters.<br/>Max 50 characters.
+POST | birthDate | Date | Format: dd/MM/yyyy
+POST | phone | String | Max 20 digits.
+POST | title | Object | See: Title Object table.
+
 ## Upload Profile Image
 > Request Upload Profile Image
 
@@ -779,42 +815,6 @@ HEAD | Content-Type | String | Fix value to "application/json"
 POST | oldPassword | String |
 POST | newPassword | String | Must not be closely similar to a previously used password.<br/>Allowed characters: A-Z, a-z, 0-9
 
-## Update Profile
-> Request Update Profile
-
-```shell
-curl https://api.cpone-dev.com/update-profile
-  -X POST
-  -H "Authorization: bearer {access_token}"
-  -H "Content-Type: application/json"
-  -d '{
-		"firstName" : "กุ๊ก",
-		"lastName" : "กิ๊ก",
-		"birthDate" : "12/03/2015",
-		"phone" : "021234567",
-		"title" : {
-      			"id" : 2
-   		}
-	}'
-```
-
-> Response
-
-
-### Request
-`POST https://api.cpone-dev.com/update-profile`
-
-### Query Parameters
-TYPE | Params | Value | Detail
----- | ------ | ----- | ------
-HEAD | Authorization | String | Access token from [Authentication](#authentication)
-HEAD | Content-Type | String | Fix value to "application/json"
-POST | firstName | String | Thai or English characters.<br/>Max 50 characters.
-POST | lastName | String | Thai or English characters.<br/>Max 50 characters.
-POST | birthDate | Date | Format: dd/MM/yyyy
-POST | phone | String | Max 20 digits.
-POST | title | Object | See: Title Object table.
-
 ## Update Address
 > Request Update Address
 
@@ -838,6 +838,7 @@ curl https://api.cpone-dev.com/update-address
 ```
 
 > Response
+
 ```json
 {
 	"id": 4,
