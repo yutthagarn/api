@@ -745,7 +745,6 @@ curl https://api.cpone-dev.com/update-profile
 		"lastName" : "กิ๊ก",
 		"birthDate" : "12/03/2015",
 		"phone" : "021234567",
-		"email" : "megaspeed@example.com",
 		"title" : {
       			"id" : 2
    		}
@@ -767,7 +766,6 @@ POST | firstName | String | Thai or English characters.<br/>Max 50 characters.
 POST | lastName | String | Thai or English characters.<br/>Max 50 characters.
 POST | birthDate | Date | Format: dd/MM/yyyy
 POST | phone | String | Max 20 digits.
-POST | email | String | Standard email format.<br/>Max 100 characters.
 POST | title | Object | See: Title Object table.
 
 ## Upload Profile Image
