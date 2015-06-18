@@ -940,6 +940,33 @@ HEAD | Content-Type | String | Fix value to "application/json"
 POST | email | String | 
 POST | password | String | 
 
+## Update Mobile Number
+> Request Update Mobile Number
+
+```shell
+curl https://api.cpone-dev.com/update-mobile
+  -X POST
+  -H "Authorization: bearer {access_token}"
+  -H "Content-Type: application/json"
+  -d '{
+		"mobile" : "0822222222",
+		"otpNumber" : "192150"
+	}'
+```
+
+> Response
+
+
+### Request
+`POST https://api.cpone-dev.com/update-mobile`
+
+### Query Parameters
+TYPE | Params | Value | Detail
+---- | ------ | ----- | ------
+HEAD | Content-Type | String | Fix value to "application/json"
+POST | mobile | String | Numeric 10 digits.
+POST | otpNumber | String | [Send OTP](#send-otp)
+
 # Forgot Password
 ## Find Mobile
 > Request Find Mobile
