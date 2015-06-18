@@ -888,13 +888,12 @@ POST | addressType | String | Required.<br/>Accept: ID_CARD_ADDRESS, SHIPPING_AD
 > Request Update Email Validation
 
 ```shell
-curl https://api.cpone-dev.com/pre-update-email
+curl https://api.cpone-dev.com/pre-update-email-only
   -X POST
   -H "Authorization: bearer {access_token}"
   -H "Content-Type: application/json"
   -d '{
-		"email" : "a@a.com",
-		"password" : "1234"
+		"email" : "a@a.com"
 	}'
 ```
 
@@ -902,26 +901,24 @@ curl https://api.cpone-dev.com/pre-update-email
 
 
 ### Request
-`POST https://api.cpone-dev.com/pre-update-email`
+`POST https://api.cpone-dev.com/pre-update-email-only`
 
 ### Query Parameters
 TYPE | Params | Value | Detail
 ---- | ------ | ----- | ------
 HEAD | Content-Type | String | Fix value to "application/json"
 POST | email | String | 
-POST | password | String | 
 
 ## Update Email
 > Request Update Email
 
 ```shell
-curl https://api.cpone-dev.com/update-email
+curl https://api.cpone-dev.com/update-email-only
   -X POST
   -H "Authorization: bearer {access_token}"
   -H "Content-Type: application/json"
   -d '{
-		"email" : "a@a.com",
-		"password" : "1234"
+		"email" : "a@a.com"
 	}'
 ```
 
@@ -929,14 +926,13 @@ curl https://api.cpone-dev.com/update-email
 
 
 ### Request
-`POST https://api.cpone-dev.com/update-email`
+`POST https://api.cpone-dev.com/update-email-only`
 
 ### Query Parameters
 TYPE | Params | Value | Detail
 ---- | ------ | ----- | ------
 HEAD | Content-Type | String | Fix value to "application/json"
 POST | email | String | 
-POST | password | String | 
 
 ## Update Mobile Number
 > Request Update Mobile Number
@@ -964,6 +960,60 @@ TYPE | Params | Value | Detail
 HEAD | Content-Type | String | Fix value to "application/json"
 POST | mobile | String | Numeric 10 digits.
 POST | otpNumber | String | [Send OTP](#send-otp)
+
+## Update Email/Password via Offline Channel Validation
+> Request Update Email/Password via Offline Channel Validation
+
+```shell
+curl https://api.cpone-dev.com/pre-email-password
+  -X POST
+  -H "Authorization: bearer {access_token}"
+  -H "Content-Type: application/json"
+  -d '{
+		"email" : "a@a.com",
+		"password" : "password"
+	}'
+```
+
+> Response
+
+
+### Request
+`POST https://api.cpone-dev.com/pre-email-password`
+
+### Query Parameters
+TYPE | Params | Value | Detail
+---- | ------ | ----- | ------
+HEAD | Content-Type | String | Fix value to "application/json"
+POST | email | String | 
+POST | password | String | 
+
+## Update Email/Password via Offline Channel
+> Request Update Email/Password via Offline Channel
+
+```shell
+curl https://api.cpone-dev.com/update-email-password
+  -X POST
+  -H "Authorization: bearer {access_token}"
+  -H "Content-Type: application/json"
+  -d '{
+		"email" : "a@a.com",
+		"password" : "password"
+	}'
+```
+
+> Response
+
+
+### Request
+`POST https://api.cpone-dev.com/update-email-password`
+
+### Query Parameters
+TYPE | Params | Value | Detail
+---- | ------ | ----- | ------
+HEAD | Content-Type | String | Fix value to "application/json"
+POST | email | String | 
+POST | password | String | 
 
 # Forgot Password
 ## Find Mobile
