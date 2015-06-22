@@ -1015,6 +1015,37 @@ HEAD | Content-Type | String | Fix value to "application/json"
 POST | email | String | 
 POST | password | String | 
 
+## Points-History
+> Request Get Points-History
+
+```shell
+curl https://api.cpone-dev.com/customers/points-history?page=0
+  -X GET
+  -H "Authorization: bearer {access_token}"
+```
+
+> Response
+
+```json
+{"content":[
+	{"id":{"companyId":1,"storeId":1,"customerId":1,"transactionId":1},"point":99,"store":{"id":1,"name":"Default Store","shortName":null,"address1":null,"address2":null,"province":null,"district":null,"postCode":null,"telephone":null,"company":{"id":1,"name":"CP Freshmart","store":[]}},"source":"POS"},
+	{"id":{"companyId":1,"storeId":1,"customerId":1,"transactionId":2},"point":88,"store":{"id":1,"name":"Default Store","shortName":null,"address1":null,"address2":null,"province":null,"district":null,"postCode":null,"telephone":null,"company":{"id":1,"name":"CP Freshmart","store":[]}},"source":"POS"},
+	{"id":{"companyId":1,"storeId":1,"customerId":1,"transactionId":3},"point":77,"store":{"id":1,"name":"Default Store","shortName":null,"address1":null,"address2":null,"province":null,"district":null,"postCode":null,"telephone":null,"company":{"id":1,"name":"CP Freshmart","store":[]}},"source":"POS"}],
+	"totalPages":1,"totalElements":3,"last":true,"size":20,"number":0,"first":true,"sort":null,"numberOfElements":3}
+```
+
+### Request
+`GET https://api.cpone-dev.com/customers/points-history?page={pageIndex}
+
+### Query Parameters
+TYPE | Params | Value | Detail
+---- | ------ | ----- | ------
+GET | page | Number | page - 1
+
+#### Note
+- ค่าของ page ที่ส่งจะเท่ากับ pageที่ต้องการ - 1, เช่น จะแสดง page ที่ 1 จะต้องส่งค่า 0 ไป
+- Default page size จะเป็น 20
+
 # Forgot Password
 ## Find Mobile
 > Request Find Mobile
