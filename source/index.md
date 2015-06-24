@@ -1019,7 +1019,7 @@ POST | password | String |
 > Request Get Points-History
 
 ```shell
-curl https://api.cpone-dev.com/customers/points-history?page=0
+curl https://api.cpone-dev.com/customers/points-history?page=1
   -X GET
   -H "Authorization: bearer {access_token}"
 ```
@@ -1028,10 +1028,23 @@ curl https://api.cpone-dev.com/customers/points-history?page=0
 
 ```json
 {"content":[
-	{"id":{"companyId":1,"storeId":1,"customerId":1,"transactionId":1},"point":99,"store":{"id":1,"name":"Default Store","shortName":null,"address1":null,"address2":null,"province":null,"district":null,"postCode":null,"telephone":null,"company":{"id":1,"name":"CP Freshmart","store":[]}},"source":"POS"},
-	{"id":{"companyId":1,"storeId":1,"customerId":1,"transactionId":2},"point":88,"store":{"id":1,"name":"Default Store","shortName":null,"address1":null,"address2":null,"province":null,"district":null,"postCode":null,"telephone":null,"company":{"id":1,"name":"CP Freshmart","store":[]}},"source":"POS"},
-	{"id":{"companyId":1,"storeId":1,"customerId":1,"transactionId":3},"point":77,"store":{"id":1,"name":"Default Store","shortName":null,"address1":null,"address2":null,"province":null,"district":null,"postCode":null,"telephone":null,"company":{"id":1,"name":"CP Freshmart","store":[]}},"source":"POS"}],
-	"totalPages":1,"totalElements":3,"last":true,"size":20,"number":0,"first":true,"sort":null,"numberOfElements":3}
+	{
+      	  "point": 10,
+      	  "source": "POS",
+      	  "createdDate": "24/06/2015 07:45",
+      	  "type": "EARN",
+      	  "bu": "CPF"
+    	}
+	],
+	"last": true,
+	"totalPages": 2,
+	"totalElements": 21,
+	"size": 20,
+	"number": 1,
+	"sort": null,
+	"first": false,
+	"numberOfElements": 1
+}
 ```
 
 ### Request
@@ -1045,6 +1058,7 @@ GET | page | Number | page - 1
 #### Note
 - ค่าของ page ที่ส่งจะเท่ากับ pageที่ต้องการ - 1, เช่น จะแสดง page ที่ 1 จะต้องส่งค่า 0 ไป
 - Default page size จะเป็น 20
+- จาก response ตัวอย่าง จะเป็นข้อมูลของ page ที่2 มีข้อมูล 1 record(records ที่ 21) 
 
 # Forgot Password
 ## Find Mobile
