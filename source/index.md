@@ -618,11 +618,13 @@ curl https://api.cpone-dev.com/customers/register
     "cpOneCard": {
         "id": 33,
         "cardNumber": "0001000000000033",
-        "cardLevel": {
-            "id": 1,
-            "name": "Normal"
-        },
-        "expiryDate": "28/05/2016"
+        "cardRule": {
+        	"nameEng": "Normal",
+        	"nameTh": "ธรรมดา"
+      	},
+        "expiryDate": "25/06/2015",
+      	"accumulateAmount": 0,
+      	"maxAccumulateAmount": 20000
     }
 }
 ```
@@ -682,14 +684,14 @@ curl https://api.cpone-dev.com/customers
 	    "addresses": [],
 	    "cpOneCard": {
 	        "id": 33,
-	        "cardNumber": "0001000000000033",
-	        "cardLevel": {
-	            "id": 1,
-	            "name": "Normal"
-	        },
-	        "expiryDate": "28/05/2016",
-	        "accumulateAmount": 0,
-	        "maxAccumulateAmount": 0
+        	"cardNumber": "0001000000000033",
+        	"cardRule": {
+        		"nameEng": "Normal",
+        		"nameTh": "ธรรมดา"
+      		},
+        	"expiryDate": "25/06/2015",
+      		"accumulateAmount": 0,
+      		"maxAccumulateAmount": 20000
 	    },
 	    "optionCards": [ ],
 	    "points": [ ],
