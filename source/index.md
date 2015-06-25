@@ -1015,8 +1015,8 @@ HEAD | Content-Type | String | Fix value to "application/json"
 POST | email | String | 
 POST | password | String | 
 
-## Points-History
-> Request Get Points-History
+## Points History
+> Request Get Points History
 
 ```shell
 curl https://api.cpone-dev.com/customers/points-history?page=1
@@ -1048,7 +1048,7 @@ curl https://api.cpone-dev.com/customers/points-history?page=1
 ```
 
 ### Request
-`GET https://api.cpone-dev.com/customers/points-history?page={pageIndex}
+`GET https://api.cpone-dev.com/customers/points-history?page={pageIndex}`
 
 ### Query Parameters
 TYPE | Params | Value | Detail
