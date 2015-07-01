@@ -717,6 +717,35 @@ TYPE | Params | Value | Detail
 ---- | ------ | ----- | ------
 HEAD | Authorization | String | Access token from [Authentication](#authentication)
 
+#### Note
+- Case login from offline ที่ไม่ได้ กด forgot password
+	{
+		"violations": [
+			{
+				"code": "REQ-10064",
+				"field": "getCustomer.account",
+				"message": "Update email/password is required"
+			}
+		],
+		"error": "Validation Failure"
+	}
+- Case มี email แต่ไม่ได้ forgot password
+	{
+		"violations": [
+			{
+				"code": "undefined",
+				"field": "getCustomer.account",
+				"message": "cpo123@mailinator.com"
+			},
+			{
+				"code": "REQ-10084",
+				"field": "getCustomer.account",
+				"message": "Please change password"
+			}
+		],
+		"error": "Validation Failure"
+	}
+
 ## Get Profile Image
 > Request Get Profile Image
 
