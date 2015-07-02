@@ -1116,7 +1116,9 @@ curl https://api.cpone-dev.com/forgotpassword/0812345678/findmobile
 ```
 
 > Response
-0812345678
+{
+  "mobile": "0830734686"
+}
 
 ### Request
 `GET https://api.cpone-dev.com/forgotpassword/{cponeId}/findmobile`
