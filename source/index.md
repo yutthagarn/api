@@ -744,6 +744,22 @@ HEAD | Authorization | String | Access token from [Authentication](#authenticati
 		],
 		"error": "Validation Failure"
 	}
+- Case forgot password  ไม่มี email
+	{
+		"violations": [
+			{
+				"code": "undefined",
+				"field": "getCustomer.account",
+				"message": ""
+			},
+			{
+				"code": "REQ-10164",
+				"field": "getCustomer.account",
+				"message": "Update email is required"
+			}
+		],
+		"error": "Validation Failure"
+	}
 
 ## Get Profile Image
 > Request Get Profile Image
