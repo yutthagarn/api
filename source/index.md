@@ -1198,3 +1198,21 @@ TYPE | Params | Value | Detail
 ---- | ------ | ----- | ------
 HEAD | Authorization | String | access token from [Authentication](#authentication)
 POST | file | File | Max file size 3 MB<br/>Allowed extension: ".png", ".jpg", ".jpeg"
+
+# Redeem
+> Request Redeem
+
+```shell
+curl https://api.cpone-dev.com/redeem/1
+  -X GET
+```
+> Response
+{"id":1,"title":"Test Redeem","startDate":"2015-07-06","endDate":null,"point":500,"limit":{"id":1,"limitType":"DAY","limit":1},"available":100,"specialPackages":[{"id":1,"name":"Chester's Extra"},{"id":1,"name":"Chester's Extra"}],"redeemChannels":[{"id":1,"name":"ใช้สิทธิทันที"}],"cardRules":[{"id":1,"nameEng":"Normal","nameTh":"ธรรมดา","requestPurchaseAccumulate":0,"startDate":"2015-01-01","requestStartDate":"06/07/2015","endDate":null,"requestEndDate":null,"cardRuleHistories":[{"id":1,"doActionUser":{"id":1,"login":"admin","firstName":"Admin","lastName":"TomatoJuice","email":"admin@cpone.com","activated":true,"department":{"id":"DEV","name":"Software Development"},"enabled":true,"fullName":"Admin TomatoJuice","username":"admin","accountNonExpired":true,"accountNonLocked":true,"credentialsNonExpired":true},"actionDate":"06/07/2015","action":"CREATE","message":"First Card"}],"imageURL":null}],"giftTypes":[{"id":1,"name":"คูปองเงินสด"}],"dayPredicates":[{"id":"MON"},{"id":"TUE"},{"id":"WED"},{"id":"THU"},{"id":"FRI"},{"id":"SAT"},{"id":"SUN"}]}
+
+### Request
+`GET https://api.cpone-dev.com/redeem/{redeemId}`
+
+### Query Parameters
+TYPE | Params | Value | Detail
+---- | ------ | ----- | ------
+GET | redeemId | Number |
