@@ -1203,7 +1203,7 @@ POST | file | File | Max file size 3 MB<br/>Allowed extension: ".png", ".jpg", "
 > Request Redeem
 
 ```shell
-curl https://api.cpone-dev.com/redeem/1
+curl https://backoffice.cpone-dev.com/redeem/1
   -X GET
 ```
 > Response
@@ -1212,7 +1212,7 @@ curl https://api.cpone-dev.com/redeem/1
 ```
 
 ### Request
-`GET https://api.cpone-dev.com/redeem/{redeemId}`
+`GET https://backoffice.cpone-dev.com/redeem/{redeemId}`
 
 ### Query Parameters
 TYPE | Params | Value | Detail
