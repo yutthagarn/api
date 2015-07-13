@@ -1108,6 +1108,8 @@ GET | page | Number | page - 1
 - ค่าของ page ที่ส่งจะเท่ากับ pageที่ต้องการ - 1, เช่น จะแสดง page ที่ 1 จะต้องส่งค่า 0 ไป
 - Default page size จะเป็น 20
 - จาก response ตัวอย่าง จะเป็นข้อมูลของ page ที่2 มีข้อมูล 1 record(records ที่ 21) 
+- ค่าของ source  มีดังนี้"RECEIPT", "POS"
+- ค่าของ type มีดังนี้ "REDEEM", "EARN"
 
 # Forgot Password
 ## Find Mobile
