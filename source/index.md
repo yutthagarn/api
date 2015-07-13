@@ -879,7 +879,8 @@ curl https://api.cpone-dev.com/update-address
 	    	"districtId" : 1,
 	    	"subDistrictId" : 1,
 	    	"postCode" : "76543",
-	    	"addressType" : "ID_CARD_ADDRESS"
+	    	"addressType" : "ID_CARD_ADDRESS",
+	    	"sameShippingAddress":true
 	}'
 ```
 
