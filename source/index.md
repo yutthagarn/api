@@ -880,7 +880,7 @@ curl https://api.cpone-dev.com/update-address
 	    	"subDistrictId" : 1,
 	    	"postCode" : "76543",
 	    	"addressType" : "ID_CARD_ADDRESS",
-	    	"sameShippingAddress":true
+	    	"sameIDCardAddress":true
 	}'
 ```
 
@@ -909,7 +909,7 @@ curl https://api.cpone-dev.com/update-address
 	},
 	"postCode": "76543",
 	"addressType": "ID_CARD_ADDRESS",
-	"sameShippingAddress":true
+	"sameIDCardAddress":true
 }
 ```
 
@@ -931,7 +931,7 @@ POST | districtId | Number | Required.
 POST | subDistrictId | Number | Required.
 POST | postCode | String | Required.<br/>Numeric 5 digits.
 POST | addressType | String | Required.<br/>Accept: ID_CARD_ADDRESS, SHIPPING_ADDRESS
-POST | sameShippingAddress | boolean | cannot be null
+POST | sameIDCardAddress | boolean | cannot be null
 
 ## Update Email Validation
 > Request Update Email Validation
