@@ -694,7 +694,6 @@ curl https://api.cpone-dev.com/customers
       		"maxAccumulateAmount": 20000
 	    },
 	    "optionCards": [ ],
-	    "points": [ ],
 	    "accumulatePoint": 0,
 	    "accumulatePointExpireDate": "31/12/2015",
 	    "accumulatePurchase": 0,
