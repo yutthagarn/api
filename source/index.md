@@ -1223,3 +1223,19 @@ curl https://backoffice.cpone-dev.com/redeem/1
 TYPE | Params | Value | Detail
 ---- | ------ | ----- | ------
 GET | redeemId | Number |
+
+# All Redeems
+> Request All Redeems
+
+```shell
+curl https://backoffice.cpone-dev.com/redeems
+  -X GET
+```
+> Response
+
+```json
+[{"id":1,"title":"Test Redeem","startDate":"14/07/2015","requestStartDate":"14/07/2015","endDate":null,"requestEndDate":null,"state":"APPROVE","requestState":"APPROVE","point":500,"limit":{"id":1,"limitType":"DAY","limit":1},"available":100,"specialPackages":[{"id":1,"name":"Chester's Extra"}],"redeemChannels":[{"id":1,"name":"ใช้สิทธิทันที"}],"cardRules":[{"id":50,"nameEng":"CP Normal","nameTh":"สฃ"}],"giftTypes":[{"id":1,"name":"คูปองเงินสด"}],"dayPredicates":[{"id":"FRI"},{"id":"MON"},{"id":"SAT"},{"id":"SUN"},{"id":"THU"},{"id":"TUE"},{"id":"WED"}],"timePeriod":{"id":1,"startTime":"18:14:55","endTime":"18:14:55"}},{"id":2,"title":"Test Redeem 2","startDate":"15/07/2015","requestStartDate":"15/07/2015","endDate":null,"requestEndDate":null,"state":"APPROVE","requestState":"APPROVE","point":500,"limit":{"id":1,"limitType":"DAY","limit":1},"available":100,"specialPackages":[{"id":1,"name":"Chester's Extra"}],"redeemChannels":[{"id":1,"name":"ใช้สิทธิทันที"}],"cardRules":[{"id":50,"nameEng":"CP Normal","nameTh":"สฃ"}],"giftTypes":[{"id":1,"name":"คูปองเงินสด"}],"dayPredicates":[{"id":"FRI"},{"id":"MON"},{"id":"SAT"},{"id":"SUN"},{"id":"THU"},{"id":"TUE"},{"id":"WED"}],"timePeriod":{"id":1,"startTime":"18:14:55","endTime":"18:14:55"}}]
+```
+
+### Request
+`https://backoffice.cpone-dev.com/redeems`
