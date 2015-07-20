@@ -1239,3 +1239,30 @@ curl https://backoffice.cpone-dev.com/redeems
 
 ### Request
 `https://backoffice.cpone-dev.com/redeems`
+
+# Redeem Now
+> Request Redeem Now
+
+```shell
+curl https://api.cpone-dev.com/redeem-now
+  -X POST
+  -H "Authorization: Basic Y2xpZW50OnNlY3JldA=="
+  -d reward-code=1234567890
+```
+> Response
+
+### Request
+`https://api.cpone-dev.com/redeem-now`
+
+#### Note
+- Validate example
+ {
+  "violations": [
+    {
+      "code": "undefined",
+      "field": "redeemNow.reward",
+      "message": "may not be null"
+    }
+  ],
+  "error": "Validation Failure"
+}
