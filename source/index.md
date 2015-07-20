@@ -1244,10 +1244,9 @@ curl https://backoffice.cpone-dev.com/redeems
 > Request Redeem Now
 
 ```shell
-curl https://api.cpone-dev.com/redeem-now
+curl https://api.cpone-dev.com/redeem-now/1
   -X POST
   -H "Authorization: Basic Y2xpZW50OnNlY3JldA=="
-  -d reward-code=1234567890
 ```
 > Response
 ```json
@@ -1256,7 +1255,13 @@ curl https://api.cpone-dev.com/redeem-now
   "timeout": "300"
 }```
 ### Request
-`https://api.cpone-dev.com/redeem-now`
+`https://api.cpone-dev.com/redeem-now/{id}`
+
+### Query Parameters
+TYPE | Params | Value | Detail
+---- | ------ | ----- | ------
+HEAD | Authorization | String | CLIENT_ID:CLIENT_SECRET base64 encrypt
+POST | id | String | redeem id
 
 #### Note
 - Validate example
