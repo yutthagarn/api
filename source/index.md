@@ -1249,11 +1249,13 @@ curl https://api.cpone-dev.com/redeem-now/1
   -H "Authorization: Basic Y2xpZW50OnNlY3JldA=="
 ```
 > Response
+
 ```json
 {
   "rewardCode": "1234567890",
   "timeout": "300"
 }```
+
 ### Request
 `https://api.cpone-dev.com/redeem-now/{id}`
 
