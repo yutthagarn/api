@@ -1250,7 +1250,9 @@ curl https://api.cpone-dev.com/redeem-now
   -d reward-code=1234567890
 ```
 > Response
-
+```{
+  "mobile": "0830734686"
+}```
 ### Request
 `https://api.cpone-dev.com/redeem-now`
 
