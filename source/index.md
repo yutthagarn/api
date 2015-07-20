@@ -1251,7 +1251,8 @@ curl https://api.cpone-dev.com/redeem-now
 ```
 > Response
 ```{
-  "rewardCode": "1234567890"
+  "rewardCode": "1234567890",
+  "timeout": "300"
 }```
 ### Request
 `https://api.cpone-dev.com/redeem-now`
