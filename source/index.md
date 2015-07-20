@@ -1246,7 +1246,7 @@ curl https://backoffice.cpone-dev.com/redeems
 ```shell
 curl https://api.cpone-dev.com/redeem-now/1
   -X POST
-  -H "Authorization: Basic Y2xpZW50OnNlY3JldA=="
+  -H "Authorization: bearer {access_token}"
 ```
 > Response
 
@@ -1263,7 +1263,7 @@ curl https://api.cpone-dev.com/redeem-now/1
 ### Query Parameters
 TYPE | Params | Value | Detail
 ---- | ------ | ----- | ------
-HEAD | Authorization | String | CLIENT_ID:CLIENT_SECRET base64 encrypt
+HEAD | Authorization | String | access token from Authentication
 POST | id | String | redeem id
 
 #### Note
