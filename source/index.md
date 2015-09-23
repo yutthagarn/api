@@ -1453,5 +1453,5 @@ GET | month | String | Month and Year to get data in YYYY-MM-DD format.
 
 <aside class="notice">
 This will see Point that user get/use (earn/burn) point based on "type" parameter.
-[API DOC!](https://drive.google.com/file/d/0B8jMf5mkjyAdOVFaNV8wTEZPVWc/view?pli=1)
+[API DOC](https://drive.google.com/file/d/0B8jMf5mkjyAdOVFaNV8wTEZPVWc/view?pli=1)
 </aside>
