@@ -1295,39 +1295,87 @@ curl https://api.cpone-dev.com/api/log/points?type=all&month=2015-09-01
 [{
     "RowKey": "SmoxbXkM_boBfoxck4soPS3pGlMJAvdPV",
     "UserId": "1021823449",
-    "Info": null,
+    "Info": {
+      "receiveId": "",
+      "receiveNo": "",
+      "transactionId": "",
+      "tranChannel": "",
+      "companyId": "",
+      "userLevel": "",
+      "spending": "",
+      "saleChannel": "",
+      "day": "",
+      "date": "",
+      "time": ""
+    },
     "Detail": "/api/auth/login",
     "Points": 1,
     "Type": "trace",
     "Timestamp": 1442825483
-},
-{
+  },
+  {
     "RowKey": "Smp2INE1rzBjRzPRcgyodl8RTd4OzQqI-",
     "UserId": "1021823449",
-    "Info": null,
+    "Info": {
+      "receiveId": "",
+      "receiveNo": "",
+      "transactionId": "",
+      "tranChannel": "",
+      "companyId": "",
+      "userLevel": "",
+      "spending": "",
+      "saleChannel": "",
+      "day": "",
+      "date": "",
+      "time": ""
+    },
     "Detail": "/api/auth/login",
     "Points": 1,
     "Type": "trace",
     "Timestamp": 1442200418
-},
-{
+  },
+  {
     "RowKey": "Smp7dXQqO_-DE0NM43hcu89wiW8LRP_UV",
     "UserId": "1021823449",
-    "Info": null,
+    "Info": {
+      "receiveId": "",
+      "receiveNo": "",
+      "transactionId": "",
+      "tranChannel": "",
+      "companyId": "",
+      "userLevel": "",
+      "spending": "",
+      "saleChannel": "",
+      "day": "",
+      "date": "",
+      "time": ""
+    },
     "Detail": "/api/auth/login",
     "Points": 1,
     "Type": "trace",
     "Timestamp": 1441612594
-},
-{
+  },
+  {
     "RowKey": "SmpAoFZvHucbIKlQmX3qP41JFsPozr4h-",
     "UserId": "1021823449",
-    "Info": null,
+    "Info": {
+      "receiveId": "",
+      "receiveNo": "",
+      "transactionId": "",
+      "tranChannel": "",
+      "companyId": "",
+      "userLevel": "",
+      "spending": "",
+      "saleChannel": "",
+      "day": "",
+      "date": "",
+      "time": ""
+    },
     "Detail": "/api/auth/login",
     "Points": 1,
     "Type": "trace",
     "Timestamp": 1441264321
- }]
+  }]
 ```
 
 ### Request
