@@ -1293,153 +1293,41 @@ curl https://api.cpone-dev.com/api/log/points?type=all&month=2015-09-01
 
 ```json
 [ {
-  "id": "c4786041-57fb-8a55-c6ba-65fa6418ae5e",
-  "name": "CPOne - STG",
-  "timestamp": 1440054317171,
-  "order": [
-    "fcae2d38-0394-0e09-7eda-2188bb560c2d",
-    "db4ea6d4-e36d-b4bb-08eb-48b3315efe64",
-    "a4b84ba8-9f81-e43e-3285-51f129749e63",
-    "4e6c7f27-6255-a181-c67b-1748e78b8621"
-  ],
-  "requests": [
-    {
-      "collectionId": "c4786041-57fb-8a55-c6ba-65fa6418ae5e",
-      "id": "4e6c7f27-6255-a181-c67b-1748e78b8621",
-      "name": "Point Log",
-      "description": "https://stg.buzzebees.com/api/log/points",
-      "url": "https://stg.buzzebees.com/api/log/points?token=.M6qjkWd8MUrVfssFcpHwSu_OXOxjApC5gTqqEp2BQUp1mAllGp--wVMqyTpoXs6MIPU2RTYxvYWPI_R27Q6TZV&type=all&month=2015-09-01",
-      "method": "GET",
-      "headers": "",
-      "data": [
-        {
-          "key": "token",
-          "value": ".sZAEObOngUu8pbrydEpLgQNOIQbE9TIiW2J7rHSaCGcOSUtGeuamZBI1ukRtXXpFO8DepADYja0chxiCfAl5Ghyz4rlaq3DEtCjSkrFeID7",
-          "type": "text"
-        },
-        {
-          "key": "userid",
-          "value": "51",
-          "type": "text"
-        },
-        {
-          "key": "campaignid",
-          "value": "10",
-          "type": "text"
-        },
-        {
-          "key": "message",
-          "value": "test by sby",
-          "type": "text"
-        },
-        {
-          "key": "is_return_point",
-          "value": "false",
-          "type": "text"
-        }
-      ],
-      "dataMode": "params",
-      "timestamp": 0,
-      "responses": [],
-      "version": 2
-    },
-    {
-      "collectionId": "c4786041-57fb-8a55-c6ba-65fa6418ae5e",
-      "id": "a4b84ba8-9f81-e43e-3285-51f129749e63",
-      "name": "Redeem",
-      "description": "https://stg.buzzebees.com/api/campaign/38166/redeem",
-      "url": "https://stg.buzzebees.com/api/campaign/38166/redeem",
-      "method": "POST",
-      "headers": "",
-      "data": [
-        {
-          "key": "token",
-          "value": ".O4wlq2227O3e3vEjfgB830V3udVWqi_cU8xDmkkZy9UIeQ9XDhqSXXkOm_yQIWVjDph4669kGRAOqamx1cvcLV",
-          "type": "text"
-        }
-      ],
-      "dataMode": "params",
-      "timestamp": 0,
-      "responses": [],
-      "version": 2
-    },
-    {
-      "collectionId": "c4786041-57fb-8a55-c6ba-65fa6418ae5e",
-      "id": "db4ea6d4-e36d-b4bb-08eb-48b3315efe64",
-      "name": "adjust point",
-      "description": "https://stg.buzzebees.com/modules/cpone/main/adjust_point",
-      "url": "https://stg.buzzebees.com/modules/cpone/main/adjust_point",
-      "method": "POST",
-      "headers": "",
-      "data": [
-        {
-          "key": "token",
-          "value": ".sZAEObOngUu8pbrydEpLgQNOIQbE9TIiW2J7rHSaCGcOSUtGeuamZBI1ukRtXXpFO8DepADYja0chxiCfAl5Ghyz4rlaq3DEtCjSkrFeID7",
-          "type": "text"
-        },
-        {
-          "key": "userid",
-          "value": "51",
-          "type": "text"
-        },
-        {
-          "key": "amount",
-          "value": "15",
-          "type": "text"
-        },
-        {
-          "key": "message",
-          "value": "test by sby",
-          "type": "text"
-        }
-      ],
-      "dataMode": "params",
-      "timestamp": 0,
-      "responses": [],
-      "version": 2
-    },
-    {
-      "collectionId": "c4786041-57fb-8a55-c6ba-65fa6418ae5e",
-      "id": "fcae2d38-0394-0e09-7eda-2188bb560c2d",
-      "name": "reactivate redeem code",
-      "description": "cpone/main/reinstate_redeem",
-      "url": "https://stg.buzzebees.com/modules/cpone/main/reinstate_redeem",
-      "method": "POST",
-      "headers": "",
-      "data": [
-        {
-          "key": "token",
-          "value": ".sZAEObOngUu8pbrydEpLgQNOIQbE9TIiW2J7rHSaCGcOSUtGeuamZBI1ukRtXXpFO8DepADYja0chxiCfAl5Ghyz4rlaq3DEtCjSkrFeID7",
-          "type": "text"
-        },
-        {
-          "key": "userid",
-          "value": "51",
-          "type": "text"
-        },
-        {
-          "key": "campaignid",
-          "value": "10",
-          "type": "text"
-        },
-        {
-          "key": "message",
-          "value": "test by sby",
-          "type": "text"
-        },
-        {
-          "key": "is_return_point",
-          "value": "false",
-          "type": "text"
-        }
-      ],
-      "dataMode": "params",
-      "timestamp": 0,
-      "responses": [],
-      "version": 2
-    }
-  ]
-}]
+    "RowKey": "SmoxbXkM_boBfoxck4soPS3pGlMJAvdPV",
+    "UserId": "1021823449",
+    "Info": null,
+    "Detail": "/api/auth/login",
+    "Points": 1,
+    "Type": "trace",
+    "Timestamp": 1442825483
+},
+{
+    "RowKey": "Smp2INE1rzBjRzPRcgyodl8RTd4OzQqI-",
+    "UserId": "1021823449",
+    "Info": null,
+    "Detail": "/api/auth/login",
+    "Points": 1,
+    "Type": "trace",
+    "Timestamp": 1442200418
+},
+{
+    "RowKey": "Smp7dXQqO_-DE0NM43hcu89wiW8LRP_UV",
+    "UserId": "1021823449",
+    "Info": null,
+    "Detail": "/api/auth/login",
+    "Points": 1,
+    "Type": "trace",
+    "Timestamp": 1441612594
+},
+{
+    "RowKey": "SmpAoFZvHucbIKlQmX3qP41JFsPozr4h-",
+    "UserId": "1021823449",
+    "Info": null,
+    "Detail": "/api/auth/login",
+    "Points": 1,
+    "Type": "trace",
+    "Timestamp": 1441264321
+ }]
 ```
 
 ### Request
