@@ -1284,8 +1284,9 @@ POST | id | String | redeem id
 > Get BZB Point (Customer)
 
 ```shell
-curl https://api.cpone-dev.com/api/log/points
+curl https://api.cpone-dev.com/api/log/points?type=all&month=2015-09-01
   -X GET
+  -H "Authorization: bearer {access_token}"
 ```
 
 > Response
@@ -1442,7 +1443,7 @@ curl https://api.cpone-dev.com/api/log/points
 ```
 
 ### Request
-`GET https://api.cpone-dev.com/api/log/points?type=all&month=2015-09-01`
+`GET https://api.cpone-dev.com/api/log/points?type={type}&month={month}`
 
 ### Query Parameters
 TYPE | Params | Value | Detail
