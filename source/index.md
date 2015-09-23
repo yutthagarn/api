@@ -1292,7 +1292,7 @@ curl https://api.cpone-dev.com/api/log/points?type=all&month=2015-09-01
 > Response
 
 ```json
-[ {
+[{
     "RowKey": "SmoxbXkM_boBfoxck4soPS3pGlMJAvdPV",
     "UserId": "1021823449",
     "Info": null,
