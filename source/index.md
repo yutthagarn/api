@@ -1278,3 +1278,55 @@ POST | id | String | redeem id
   ],
   "error": "Validation Failure"
 }
+
+# BzB
+## API 1
+> Get API 1
+
+```shell
+curl https://api.cpone-dev.com/public/titles
+  -X GET
+```
+
+> Response
+
+```json
+[ {
+  "id" : 1,
+  "nameTh" : "นาย",
+  "nameEn" : "Mr.",
+  "gender" : "MALE"
+}, {
+  "id" : 2,
+  "nameTh" : "นาง",
+  "nameEn" : "Mrs.",
+  "gender" : "FEMALE"
+}, {
+  "id" : 3,
+  "nameTh" : "นางสาว",
+  "nameEn" : "Ms.",
+  "gender" : "FEMALE"
+}, {
+  "id" : 4,
+  "nameTh" : "เด็กชาย",
+  "nameEn" : "Mstr.",
+  "gender" : "MALE"
+}, {
+  "id" : 5,
+  "nameTh" : "เด็กหญิง",
+  "nameEn" : "Miss",
+  "gender" : "FEMALE"
+} ]
+```
+
+### Request
+`GET https://api.cpone-dev.com/public/titles`
+
+### Query Parameters
+TYPE | Params | Value | Detail
+---- | ------ | ----- | ------
+PATH | id | Number | The district id.
+
+<aside class="notice">
+All Sub-Districts sort by name
+</aside>
