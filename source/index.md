@@ -1449,8 +1449,9 @@ curl https://api.cpone-dev.com/api/log/points?type=all&month=2015-09-01
 TYPE | Params | Value | Detail
 ---- | ------ | ----- | ------
 GET | type | String | Accept: all,earn,burn
-GET | type | String | Month and Year to get data in YYYY-MM-DD format.
+GET | month | String | Month and Year to get data in YYYY-MM-DD format.
 
 <aside class="notice">
 This will see Point that user get/use (earn/burn) point based on "type" parameter.
+(https://drive.google.com/file/d/0B8jMf5mkjyAdOVFaNV8wTEZPVWc/view?pli=1)
 </aside>
