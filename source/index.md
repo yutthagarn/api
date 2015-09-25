@@ -1333,48 +1333,6 @@ curl https://api.cpone-dev.com/api/log/points?type=all&month=2015-09-01
     "Points": 1,
     "Type": "trace",
     "Timestamp": 1442200418
-  },
-  {
-    "RowKey": "Smp7dXQqO_-DE0NM43hcu89wiW8LRP_UV",
-    "UserId": "1021823449",
-    "Info": {
-      "receiveId": "",
-      "receiveNo": "",
-      "transactionId": "",
-      "tranChannel": "",
-      "companyId": "",
-      "userLevel": "",
-      "spending": "",
-      "saleChannel": "",
-      "day": "",
-      "date": "",
-      "time": ""
-    },
-    "Detail": "/api/auth/login",
-    "Points": 1,
-    "Type": "trace",
-    "Timestamp": 1441612594
-  },
-  {
-    "RowKey": "SmpAoFZvHucbIKlQmX3qP41JFsPozr4h-",
-    "UserId": "1021823449",
-    "Info": {
-      "receiveId": "",
-      "receiveNo": "",
-      "transactionId": "",
-      "tranChannel": "",
-      "companyId": "",
-      "userLevel": "",
-      "spending": "",
-      "saleChannel": "",
-      "day": "",
-      "date": "",
-      "time": ""
-    },
-    "Detail": "/api/auth/login",
-    "Points": 1,
-    "Type": "trace",
-    "Timestamp": 1441264321
   }]
 ```
 
@@ -1391,3 +1349,47 @@ GET | month | String | Month and Year to get data in YYYY-MM-DD format.
 This will see Point that user get/use (earn/burn) point based on "type" parameter.
 </aside>
 [API DOC](https://drive.google.com/file/d/0B8jMf5mkjyAdOVFaNV8wTEZPVWc/view?pli=1)
+
+## BZB Redeem (Customer)
+> Get BZB Redeem (Customer)
+
+```shell
+curl https://api.cpone-dev.com/api/campaign/{campaignId}/redeem
+  -X GET
+  -H "Authorization: bearer {access_token}"
+```
+
+> Response
+
+```json
+[{
+  "CampaignId": 64735,
+  "ItemNumber": 14,
+  "Serial": "NNGJGUR",
+  "AgencyId": 104442,
+  "CatId": 900610,
+  "Name": "test status publish",
+  "NextRedeemDate": null,
+  "CurrentDate": 1443190626,
+  "PrivilegeMessage": null,
+  "RedeemCount": 8,
+  "UseCount": 0,
+  "Qty": 86,
+  "IsConditionPass": true,
+  "ConditionAlert": null,
+  "IsNotAutoUse": false,
+  "PointType": null
+}]
+```
+
+### Request
+`GET https://api.cpone-dev.com/api/campaign/64735/redeem`
+
+### Query Parameters
+TYPE | Params | Value | Detail
+---- | ------ | ----- | ------
+GET | campaignId | String | Campaign id (e.g. 64735)
+
+<aside class="notice">
+This function will be called on campaign redemption. Please note that it will not be used for Type-Buy Campaign.
+</aside>
