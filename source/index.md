@@ -1354,8 +1354,8 @@ This will see Point that user get/use (earn/burn) point based on "type" paramete
 > Get BZB Redeem (Customer)
 
 ```shell
-curl https://api.cpone-dev.com/api/campaign/{campaignId}/redeem
-  -X GET
+curl https://api.cpone-dev.com/api/campaign/64735/redeem
+  -X POST
   -H "Authorization: bearer {access_token}"
 ```
 
@@ -1383,7 +1383,7 @@ curl https://api.cpone-dev.com/api/campaign/{campaignId}/redeem
 ```
 
 ### Request
-`GET https://api.cpone-dev.com/api/campaign/64735/redeem`
+`GET https://api.cpone-dev.com/api/campaign/{campaignId}/redeem`
 
 ### Query Parameters
 TYPE | Params | Value | Detail
