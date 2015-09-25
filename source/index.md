@@ -1388,7 +1388,7 @@ curl https://api.cpone-dev.com/api/campaign/64735/redeem
 ### Query Parameters
 TYPE | Params | Value | Detail
 ---- | ------ | ----- | ------
-GET | campaignId | String | Campaign id (e.g. 64735)
+POST | campaignId | String | Campaign id (e.g. 64735)
 
 <aside class="notice">
 This function will be called on campaign redemption. Please note that it will not be used for Type-Buy Campaign.
