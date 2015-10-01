@@ -1154,7 +1154,7 @@ GET | customerId | Number | Customer ID
 > Request Get Inbox Detail
 
 ```shell
-curl https://api.cpone-dev.com/inboxs/by-box/1
+curl https://api.cpone-dev.com/inboxs/by-box/3
   -X GET
   -H "Authorization: bearer {access_token}"
 ```
