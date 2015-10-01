@@ -1110,6 +1110,77 @@ GET | page | Number | page - 1
 - ค่าของ source  มีดังนี้"RECEIPT", "POS"
 - ค่าของ type มีดังนี้ "REDEEM", "EARN"
 
+## Get Inbox
+> Request Get Inbox
+
+```shell
+curl https://api.cpone-dev.com/inboxs/by-customer/1
+  -X GET
+  -H "Authorization: bearer {access_token}"
+```
+
+> Response
+
+```json
+[
+  {
+    "id": 1,
+    "title": "วัตสันแจกคูปองใช้แทนเงินสด",
+    "sentDate": "01/10/2015 15:09:11"
+  },
+  {
+    "id": 2,
+    "title": "อิชิตัน รหัสรวยเปรี้ยง ตอน ทอง หมื่น แสน ล้าน",
+    "sentDate": "01/10/2015 15:09:11"
+  },
+  {
+    "id": 3,
+    "title": "โปรโมชั่น Central/ZEN The1Card X-Treme แต้มกระจุย… ช้อปกระจาย",
+    "sentDate": "01/10/2015 15:09:11"
+  }
+]
+```
+
+### Request
+`GET https://api.cpone-dev.com/inboxs/by-customer/{customerId}`
+
+### Query Parameters
+TYPE | Params | Value | Detail
+---- | ------ | ----- | ------
+GET | customerId | Number | Customer ID
+
+
+## Get Inbox Detail
+> Request Get Inbox Detail
+
+```shell
+curl https://api.cpone-dev.com/inboxs/by-box/1
+  -X GET
+  -H "Authorization: bearer {access_token}"
+```
+
+> Response
+
+```json
+{
+  "id": 3,
+  "title": "โปรโมชั่น Central/ZEN The1Card X-Treme แต้มกระจุย… ช้อปกระจาย",
+  "detail": "The 1 Card แลกรับส่วนลด สูงสุด 40%",
+  "sentDate": "01/10/2015 15:09:11",
+  "hasRead": true,
+  "imageUrl": "xxx.jpg"
+}
+```
+
+### Request
+`GET https://api.cpone-dev.com/inboxs/by-box/{inboxId}`
+
+### Query Parameters
+TYPE | Params | Value | Detail
+---- | ------ | ----- | ------
+GET | inboxId | Number | Inbox ID
+
+
 # Forgot Password
 ## Find Mobile
 > Request Find Mobile
