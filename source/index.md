@@ -1168,7 +1168,7 @@ curl https://api.cpone-dev.com/inboxs/by-box/1
   "detail": "The 1 Card แลกรับส่วนลด สูงสุด 40%",
   "sentDate": "01/10/2015 15:09:11",
   "hasRead": true,
-  "imageUrl": "xxx.jpg"
+  "imageUrl": "http://localhost:8080/inboxs/image"
 }
 ```
 
