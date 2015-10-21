@@ -1114,41 +1114,38 @@ GET | page | Number | page - 1
 > Request Get Inbox
 
 ```shell
-curl https://api.cpone-dev.com/inboxs/by-customer/1
-  -X GET
+curl https://api.cpone-dev.com/inboxs/customer
+  -X POST
   -H "Authorization: bearer {access_token}"
 ```
 
 > Response
 
 ```json
-[
-  {
-    "id": 1,
-    "title": "วัตสันแจกคูปองใช้แทนเงินสด",
-    "sentDate": "01/10/2015 15:09:11"
-  },
-  {
-    "id": 2,
-    "title": "อิชิตัน รหัสรวยเปรี้ยง ตอน ทอง หมื่น แสน ล้าน",
-    "sentDate": "01/10/2015 15:09:11"
-  },
-  {
-    "id": 3,
-    "title": "โปรโมชั่น Central/ZEN The1Card X-Treme แต้มกระจุย… ช้อปกระจาย",
-    "sentDate": "01/10/2015 15:09:11"
-  }
-]
+{
+  "hasNext": false,
+  "size": 20,
+  "content": [
+    {
+      "id": 4,
+      "title": "โปรโมชั่น 7-eleven (7-11 เซเว่น อีเลฟเว่น) ประจำเดือนกันยายน 2558",
+      "sentDate": "21/10/2015 17:56:07"
+    }
+  ],
+  "hasPrevious": false,
+  "number": 0,
+  "sort": null,
+  "last": true,
+  "hasContent": true,
+  "totalElements": 1,
+  "first": true,
+  "totalPages": 1,
+  "numberOfElements": 1
+}
 ```
 
 ### Request
-`GET https://api.cpone-dev.com/inboxs/by-customer/{customerId}`
-
-### Query Parameters
-TYPE | Params | Value | Detail
----- | ------ | ----- | ------
-GET | customerId | Number | Customer ID
-
+`POST https://api.cpone-dev.com/inboxs/customer`
 
 ## Get Inbox Detail
 > Request Get Inbox Detail
