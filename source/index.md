@@ -1115,7 +1115,7 @@ GET | page | Number | page - 1
 
 ```shell
 curl https://api.cpone-dev.com/inboxs/customer
-  -X POST
+  -X GET
   -H "Authorization: bearer {access_token}"
 ```
 
@@ -1145,7 +1145,7 @@ curl https://api.cpone-dev.com/inboxs/customer
 ```
 
 ### Request
-`POST https://api.cpone-dev.com/inboxs/customer`
+`GET https://api.cpone-dev.com/inboxs/customer`
 
 ## Get Inbox Detail
 > Request Get Inbox Detail
