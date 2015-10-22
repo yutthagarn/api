@@ -1081,7 +1081,11 @@ curl https://api.cpone-dev.com/customers/points-history?page=1
       	  "source": "POS",
       	  "createdDate": "24/06/2015 07:45",
       	  "type": "EARN",
-      	  "bu": "CPF"
+      	  "bu": "CPF",
+      	  "rewardNameTh": "Gold status is 500 points for 200 baht discount coupon at Chester's.",
+      	  "rewardNameEn": "",
+      	  "redeemDate": "20/10/2015 20:17",
+      	  "useDate": "20/10/2015 20:17"
     	}
 	],
 	"last": true,
