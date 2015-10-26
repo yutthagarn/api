@@ -1155,7 +1155,7 @@ curl https://api.cpone-dev.com/inboxs/customer
 > Request Get Inbox Detail
 
 ```shell
-curl https://api.cpone-dev.com/inboxs/by-box/3
+curl https://api.cpone-dev.com/inboxs/3
   -X GET
   -H "Authorization: bearer {access_token}"
 ```
@@ -1174,7 +1174,7 @@ curl https://api.cpone-dev.com/inboxs/by-box/3
 ```
 
 ### Request
-`GET https://api.cpone-dev.com/inboxs/by-box/{inboxId}`
+`GET https://api.cpone-dev.com/inboxs/{inboxId}`
 
 ### Query Parameters
 TYPE | Params | Value | Detail
